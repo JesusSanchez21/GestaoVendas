@@ -61,6 +61,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="pt.com.Gvendas.CONEXAO\Pasta\Check.cs" />
     <Compile Include="pt.com.Gvendas.DAO\SQL\SqLConnection.cs" />
     <Compile Include="pt.com.Gvendas.MODEL\Cliente.cs" />
     <Compile Include="pt.com.Gvendas.VIEWS\FormClientes.cs">
