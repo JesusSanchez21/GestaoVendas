@@ -41,10 +41,10 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.buttonSalvar = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBoxNome = new System.Windows.Forms.TextBox();
+            this.textBoxTelefone = new System.Windows.Forms.TextBox();
+            this.textBoxEmail = new System.Windows.Forms.TextBox();
+            this.textBoxMorada = new System.Windows.Forms.TextBox();
             this.buttonNovo = new System.Windows.Forms.Button();
             this.buttonEditar = new System.Windows.Forms.Button();
             this.buttonRemover = new System.Windows.Forms.Button();
@@ -64,7 +64,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(1, 1);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(148, 387);
+            this.panel1.Size = new System.Drawing.Size(148, 395);
             this.panel1.TabIndex = 0;
             // 
             // button7
@@ -220,38 +220,39 @@
             this.buttonSalvar.TabIndex = 6;
             this.buttonSalvar.Text = "Salvar";
             this.buttonSalvar.UseVisualStyleBackColor = false;
+            this.buttonSalvar.Click += new System.EventHandler(this.buttonSalvar_Click);
             // 
-            // textBox1
+            // textBoxNome
             // 
-            this.textBox1.BackColor = System.Drawing.Color.Gainsboro;
-            this.textBox1.Location = new System.Drawing.Point(194, 85);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 7;
+            this.textBoxNome.BackColor = System.Drawing.Color.Gainsboro;
+            this.textBoxNome.Location = new System.Drawing.Point(194, 85);
+            this.textBoxNome.Name = "textBoxNome";
+            this.textBoxNome.Size = new System.Drawing.Size(100, 20);
+            this.textBoxNome.TabIndex = 7;
             // 
-            // textBox2
+            // textBoxTelefone
             // 
-            this.textBox2.BackColor = System.Drawing.Color.Gainsboro;
-            this.textBox2.Location = new System.Drawing.Point(408, 85);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 8;
+            this.textBoxTelefone.BackColor = System.Drawing.Color.Gainsboro;
+            this.textBoxTelefone.Location = new System.Drawing.Point(408, 85);
+            this.textBoxTelefone.Name = "textBoxTelefone";
+            this.textBoxTelefone.Size = new System.Drawing.Size(100, 20);
+            this.textBoxTelefone.TabIndex = 8;
             // 
-            // textBox3
+            // textBoxEmail
             // 
-            this.textBox3.BackColor = System.Drawing.Color.Gainsboro;
-            this.textBox3.Location = new System.Drawing.Point(408, 179);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 9;
+            this.textBoxEmail.BackColor = System.Drawing.Color.Gainsboro;
+            this.textBoxEmail.Location = new System.Drawing.Point(408, 179);
+            this.textBoxEmail.Name = "textBoxEmail";
+            this.textBoxEmail.Size = new System.Drawing.Size(100, 20);
+            this.textBoxEmail.TabIndex = 9;
             // 
-            // textBox4
+            // textBoxMorada
             // 
-            this.textBox4.BackColor = System.Drawing.Color.Gainsboro;
-            this.textBox4.Location = new System.Drawing.Point(194, 179);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
-            this.textBox4.TabIndex = 10;
+            this.textBoxMorada.BackColor = System.Drawing.Color.Gainsboro;
+            this.textBoxMorada.Location = new System.Drawing.Point(194, 179);
+            this.textBoxMorada.Name = "textBoxMorada";
+            this.textBoxMorada.Size = new System.Drawing.Size(100, 20);
+            this.textBoxMorada.TabIndex = 10;
             // 
             // buttonNovo
             // 
@@ -303,14 +304,14 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
-            this.ClientSize = new System.Drawing.Size(614, 389);
+            this.ClientSize = new System.Drawing.Size(579, 397);
             this.Controls.Add(this.buttonRemover);
             this.Controls.Add(this.buttonEditar);
             this.Controls.Add(this.buttonNovo);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textBoxMorada);
+            this.Controls.Add(this.textBoxEmail);
+            this.Controls.Add(this.textBoxTelefone);
+            this.Controls.Add(this.textBoxNome);
             this.Controls.Add(this.buttonSalvar);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -340,12 +341,12 @@
         private System.Windows.Forms.Button buttonFornecedores;
         private System.Windows.Forms.Button buttonFuncionarios;
         private System.Windows.Forms.Button buttonProdutos;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBoxNome;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox textBoxTelefone;
+        private System.Windows.Forms.TextBox textBoxEmail;
+        private System.Windows.Forms.TextBox textBoxMorada;
         private System.Windows.Forms.Button buttonNovo;
         private System.Windows.Forms.Button buttonEditar;
         private System.Windows.Forms.Button buttonRemover;

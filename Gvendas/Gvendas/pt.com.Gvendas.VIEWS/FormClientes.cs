@@ -16,5 +16,17 @@ namespace Gvendas
         {
             InitializeComponent();
         }
+
+        private void buttonSalvar_Click(object sender, EventArgs e)
+        {
+            Cliente cliente = new Cliente
+            {
+                Nome = textBoxNome.Text,
+                Email = textBoxEmail.Text,
+                Morada = textBoxMorada.Text,
+                Telefone = int.Parse(textBoxTelefone.Text)
+            };
+        }
+
     }
 }
