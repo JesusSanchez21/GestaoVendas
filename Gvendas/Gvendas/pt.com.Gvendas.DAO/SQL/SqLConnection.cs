@@ -16,20 +16,26 @@ namespace Gvendas.pt.com.Gvendas.DAO.SQL
         static string projectDirectory = Directory.GetParent(workingDirectory).Parent.FullName;
         static internal SqlConnection conn_sqlserver = null;
         public static string clipboardText = null;
-        static private readonly String sqlConnStringBdLocal = $@"Data Source =(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Aluno\Source\Repos\Exercicio-P1\Ex1\Database1.mdf;Integrated Security = True";
+        // LocalDB -Instância local SQL Server express do Visual Studio.
+        static private readonly string sqlConnStringBdLocal = $@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename={projectDirectory}\pt.com.Gvendas.CONEXAO\DatabaseSGV.mdf;Integrated Security=True";
 
-        static internal DbConnection OpenConnection(int dbmsToActivate)
-        {
-            DBMSactive = dbmsToActivate;
-            return OpenConnection();
-        }
 
         static internal DbConnection OpenConnection()
         {
             CloseAllConnections(false);
 
-            DbConnection connection = null;
-            return connection;
+            try
+            {
+                conn_sqlserver = new SqlConnection(sqlConnStringBdLocal);
+                conn_sqlserver.Open();
+            }
+            catch (Exception ex)
+            {
+
+                throw new Exception(ex.Message, ex.InnerException);
+            }
+
+            return conn_sqlserver;
         }
         static internal void CloseAllConnections(bool dbmsActiveNull)
         {

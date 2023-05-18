@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Gvendas.pt.com.Gvendas.VIEWS;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -16,7 +17,7 @@ namespace Gvendas
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormClientes());
+            Application.Run(new FormFuncionarios());
         }
     }
 }
