@@ -48,12 +48,14 @@
             this.buttonNovo = new System.Windows.Forms.Button();
             this.buttonEditar = new System.Windows.Forms.Button();
             this.buttonRemover = new System.Windows.Forms.Button();
+            this.buttonTestDB = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.DimGray;
+            this.panel1.Controls.Add(this.buttonTestDB);
             this.panel1.Controls.Add(this.button7);
             this.panel1.Controls.Add(this.button6);
             this.panel1.Controls.Add(this.buttonEncomendas);
@@ -141,6 +143,7 @@
             this.buttonFuncionarios.TabIndex = 1;
             this.buttonFuncionarios.Text = "Funcionarios";
             this.buttonFuncionarios.UseVisualStyleBackColor = false;
+            this.buttonFuncionarios.Click += new System.EventHandler(this.buttonFuncionarios_Click);
             // 
             // buttonProdutos
             // 
@@ -299,6 +302,22 @@
             this.buttonRemover.Text = "Remover";
             this.buttonRemover.UseVisualStyleBackColor = false;
             // 
+            // buttonTestDB
+            // 
+            this.buttonTestDB.BackColor = System.Drawing.Color.Gray;
+            this.buttonTestDB.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonTestDB.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.buttonTestDB.FlatAppearance.BorderSize = 2;
+            this.buttonTestDB.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonTestDB.ForeColor = System.Drawing.Color.White;
+            this.buttonTestDB.Location = new System.Drawing.Point(0, 341);
+            this.buttonTestDB.Name = "buttonTestDB";
+            this.buttonTestDB.Size = new System.Drawing.Size(148, 47);
+            this.buttonTestDB.TabIndex = 7;
+            this.buttonTestDB.Text = "TestDB";
+            this.buttonTestDB.UseVisualStyleBackColor = false;
+            this.buttonTestDB.Click += new System.EventHandler(this.buttonTestDB_Click);
+            // 
             // FormClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -350,6 +369,7 @@
         private System.Windows.Forms.Button buttonNovo;
         private System.Windows.Forms.Button buttonEditar;
         private System.Windows.Forms.Button buttonRemover;
+        private System.Windows.Forms.Button buttonTestDB;
     }
 }
 

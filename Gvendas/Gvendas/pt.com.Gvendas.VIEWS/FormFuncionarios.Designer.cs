@@ -40,14 +40,14 @@ namespace Gvendas.pt.com.Gvendas.VIEWS
             this.label1 = new System.Windows.Forms.Label();
             this.labelNome = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.buttonTestDB = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.buttonEncomendas = new System.Windows.Forms.Button();
             this.buttonFornecedores = new System.Windows.Forms.Button();
-            this.buttonFuncionarios = new System.Windows.Forms.Button();
+            this.buttonClientes = new System.Windows.Forms.Button();
             this.buttonProdutos = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.buttonTestDB = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -163,7 +163,7 @@ namespace Gvendas.pt.com.Gvendas.VIEWS
             this.panel1.Controls.Add(this.button6);
             this.panel1.Controls.Add(this.buttonEncomendas);
             this.panel1.Controls.Add(this.buttonFornecedores);
-            this.panel1.Controls.Add(this.buttonFuncionarios);
+            this.panel1.Controls.Add(this.buttonClientes);
             this.panel1.Controls.Add(this.buttonProdutos);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
@@ -171,6 +171,22 @@ namespace Gvendas.pt.com.Gvendas.VIEWS
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(148, 397);
             this.panel1.TabIndex = 14;
+            // 
+            // buttonTestDB
+            // 
+            this.buttonTestDB.BackColor = System.Drawing.Color.Gray;
+            this.buttonTestDB.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonTestDB.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.buttonTestDB.FlatAppearance.BorderSize = 2;
+            this.buttonTestDB.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonTestDB.ForeColor = System.Drawing.Color.White;
+            this.buttonTestDB.Location = new System.Drawing.Point(0, 341);
+            this.buttonTestDB.Name = "buttonTestDB";
+            this.buttonTestDB.Size = new System.Drawing.Size(148, 47);
+            this.buttonTestDB.TabIndex = 6;
+            this.buttonTestDB.Text = "TestDB";
+            this.buttonTestDB.UseVisualStyleBackColor = false;
+            this.buttonTestDB.Click += new System.EventHandler(this.buttonTestDB_Click);
             // 
             // button7
             // 
@@ -232,21 +248,21 @@ namespace Gvendas.pt.com.Gvendas.VIEWS
             this.buttonFornecedores.Text = "Fornecedores";
             this.buttonFornecedores.UseVisualStyleBackColor = false;
             // 
-            // buttonFuncionarios
+            // buttonClientes
             // 
-            this.buttonFuncionarios.BackColor = System.Drawing.Color.Gray;
-            this.buttonFuncionarios.Dock = System.Windows.Forms.DockStyle.Top;
-            this.buttonFuncionarios.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.buttonFuncionarios.FlatAppearance.BorderSize = 2;
-            this.buttonFuncionarios.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonFuncionarios.ForeColor = System.Drawing.Color.White;
-            this.buttonFuncionarios.Location = new System.Drawing.Point(0, 106);
-            this.buttonFuncionarios.Name = "buttonFuncionarios";
-            this.buttonFuncionarios.Size = new System.Drawing.Size(148, 47);
-            this.buttonFuncionarios.TabIndex = 1;
-            this.buttonFuncionarios.Text = "Funcionarios";
-            this.buttonFuncionarios.UseVisualStyleBackColor = false;
-            this.buttonFuncionarios.Click += new System.EventHandler(this.buttonFuncionarios_Click);
+            this.buttonClientes.BackColor = System.Drawing.Color.Gray;
+            this.buttonClientes.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonClientes.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.buttonClientes.FlatAppearance.BorderSize = 2;
+            this.buttonClientes.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonClientes.ForeColor = System.Drawing.Color.White;
+            this.buttonClientes.Location = new System.Drawing.Point(0, 106);
+            this.buttonClientes.Name = "buttonClientes";
+            this.buttonClientes.Size = new System.Drawing.Size(148, 47);
+            this.buttonClientes.TabIndex = 1;
+            this.buttonClientes.Text = "Clientes";
+            this.buttonClientes.UseVisualStyleBackColor = false;
+            this.buttonClientes.Click += new System.EventHandler(this.buttonClientes_Click);
             // 
             // buttonProdutos
             // 
@@ -271,22 +287,6 @@ namespace Gvendas.pt.com.Gvendas.VIEWS
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(148, 59);
             this.panel2.TabIndex = 0;
-            // 
-            // buttonTestDB
-            // 
-            this.buttonTestDB.BackColor = System.Drawing.Color.Gray;
-            this.buttonTestDB.Dock = System.Windows.Forms.DockStyle.Top;
-            this.buttonTestDB.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.buttonTestDB.FlatAppearance.BorderSize = 2;
-            this.buttonTestDB.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonTestDB.ForeColor = System.Drawing.Color.White;
-            this.buttonTestDB.Location = new System.Drawing.Point(0, 341);
-            this.buttonTestDB.Name = "buttonTestDB";
-            this.buttonTestDB.Size = new System.Drawing.Size(148, 47);
-            this.buttonTestDB.TabIndex = 6;
-            this.buttonTestDB.Text = "TestDB";
-            this.buttonTestDB.UseVisualStyleBackColor = false;
-            this.buttonTestDB.Click += new System.EventHandler(this.buttonTestDB_Click);
             // 
             // FormFuncionarios
             // 
@@ -331,7 +331,7 @@ namespace Gvendas.pt.com.Gvendas.VIEWS
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button buttonEncomendas;
         private System.Windows.Forms.Button buttonFornecedores;
-        private System.Windows.Forms.Button buttonFuncionarios;
+        private System.Windows.Forms.Button buttonClientes;
         private System.Windows.Forms.Button buttonProdutos;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button buttonTestDB;

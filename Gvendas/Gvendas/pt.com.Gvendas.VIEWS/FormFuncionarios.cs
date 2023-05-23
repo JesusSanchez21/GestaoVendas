@@ -43,12 +43,7 @@ namespace Gvendas.pt.com.Gvendas.VIEWS
             textBoxTelefone.Enabled = false;
         }
 
-        private void buttonFuncionarios_Click(object sender, EventArgs e)
-        {
-            FormFuncionarios form = new FormFuncionarios(2);
-
-            form.ShowDialog();
-        }
+        
 
         private void buttonCancel_Click(object sender, EventArgs e)
         {
@@ -86,6 +81,14 @@ namespace Gvendas.pt.com.Gvendas.VIEWS
                 MessageBox.Show("Ligação DB com erro", "DB não ligada", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
 
             }
+        }
+
+        private void buttonClientes_Click(object sender, EventArgs e)
+        {
+            
+                FormClientes form = new FormClientes(2);
+
+                form.ShowDialog();
         }
     }
 }
