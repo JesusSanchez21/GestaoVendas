@@ -232,6 +232,7 @@ namespace Gvendas.pt.com.Gvendas.VIEWS
             this.buttonEncomendas.TabIndex = 3;
             this.buttonEncomendas.Text = "Encomendas";
             this.buttonEncomendas.UseVisualStyleBackColor = false;
+            this.buttonEncomendas.Click += new System.EventHandler(this.buttonEncomendas_Click);
             // 
             // buttonFornecedores
             // 

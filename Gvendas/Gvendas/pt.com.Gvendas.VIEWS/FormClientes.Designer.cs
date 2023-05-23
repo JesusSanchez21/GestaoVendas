@@ -29,11 +29,13 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.buttonTestDB = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.buttonEncomendas = new System.Windows.Forms.Button();
             this.buttonFornecedores = new System.Windows.Forms.Button();
             this.buttonFuncionarios = new System.Windows.Forms.Button();
+            this.buttonProdutos = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.labelNome = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -43,10 +45,8 @@
             this.textBoxTelefone = new System.Windows.Forms.TextBox();
             this.textBoxEmail = new System.Windows.Forms.TextBox();
             this.textBoxMorada = new System.Windows.Forms.TextBox();
-            this.buttonTestDB = new System.Windows.Forms.Button();
             this.buttonCancel = new System.Windows.Forms.Button();
             this.buttonSalvar = new System.Windows.Forms.Button();
-            this.buttonProdutos = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -66,6 +66,22 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(148, 395);
             this.panel1.TabIndex = 0;
+            // 
+            // buttonTestDB
+            // 
+            this.buttonTestDB.BackColor = System.Drawing.Color.Gray;
+            this.buttonTestDB.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonTestDB.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.buttonTestDB.FlatAppearance.BorderSize = 2;
+            this.buttonTestDB.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonTestDB.ForeColor = System.Drawing.Color.White;
+            this.buttonTestDB.Location = new System.Drawing.Point(0, 341);
+            this.buttonTestDB.Name = "buttonTestDB";
+            this.buttonTestDB.Size = new System.Drawing.Size(148, 47);
+            this.buttonTestDB.TabIndex = 7;
+            this.buttonTestDB.Text = "TestDB";
+            this.buttonTestDB.UseVisualStyleBackColor = false;
+            this.buttonTestDB.Click += new System.EventHandler(this.buttonTestDB_Click);
             // 
             // button7
             // 
@@ -111,6 +127,7 @@
             this.buttonEncomendas.TabIndex = 3;
             this.buttonEncomendas.Text = "Encomendas";
             this.buttonEncomendas.UseVisualStyleBackColor = false;
+            this.buttonEncomendas.Click += new System.EventHandler(this.buttonEncomendas_Click);
             // 
             // buttonFornecedores
             // 
@@ -143,6 +160,22 @@
             this.buttonFuncionarios.Text = "Funcionarios";
             this.buttonFuncionarios.UseVisualStyleBackColor = false;
             this.buttonFuncionarios.Click += new System.EventHandler(this.buttonFuncionarios_Click);
+            // 
+            // buttonProdutos
+            // 
+            this.buttonProdutos.BackColor = System.Drawing.Color.Gray;
+            this.buttonProdutos.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonProdutos.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.buttonProdutos.FlatAppearance.BorderSize = 2;
+            this.buttonProdutos.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonProdutos.ForeColor = System.Drawing.Color.White;
+            this.buttonProdutos.Location = new System.Drawing.Point(0, 59);
+            this.buttonProdutos.Name = "buttonProdutos";
+            this.buttonProdutos.Size = new System.Drawing.Size(148, 47);
+            this.buttonProdutos.TabIndex = 0;
+            this.buttonProdutos.Text = "Produtos";
+            this.buttonProdutos.UseVisualStyleBackColor = false;
+            this.buttonProdutos.Click += new System.EventHandler(this.buttonProdutos_Click);
             // 
             // panel2
             // 
@@ -225,22 +258,6 @@
             this.textBoxMorada.Size = new System.Drawing.Size(100, 20);
             this.textBoxMorada.TabIndex = 10;
             // 
-            // buttonTestDB
-            // 
-            this.buttonTestDB.BackColor = System.Drawing.Color.Gray;
-            this.buttonTestDB.Dock = System.Windows.Forms.DockStyle.Top;
-            this.buttonTestDB.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.buttonTestDB.FlatAppearance.BorderSize = 2;
-            this.buttonTestDB.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonTestDB.ForeColor = System.Drawing.Color.White;
-            this.buttonTestDB.Location = new System.Drawing.Point(0, 341);
-            this.buttonTestDB.Name = "buttonTestDB";
-            this.buttonTestDB.Size = new System.Drawing.Size(148, 47);
-            this.buttonTestDB.TabIndex = 7;
-            this.buttonTestDB.Text = "TestDB";
-            this.buttonTestDB.UseVisualStyleBackColor = false;
-            this.buttonTestDB.Click += new System.EventHandler(this.buttonTestDB_Click);
-            // 
             // buttonCancel
             // 
             this.buttonCancel.BackColor = System.Drawing.Color.Gray;
@@ -270,22 +287,6 @@
             this.buttonSalvar.TabIndex = 26;
             this.buttonSalvar.Text = "Salvar";
             this.buttonSalvar.UseVisualStyleBackColor = false;
-            // 
-            // buttonProdutos
-            // 
-            this.buttonProdutos.BackColor = System.Drawing.Color.Gray;
-            this.buttonProdutos.Dock = System.Windows.Forms.DockStyle.Top;
-            this.buttonProdutos.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.buttonProdutos.FlatAppearance.BorderSize = 2;
-            this.buttonProdutos.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonProdutos.ForeColor = System.Drawing.Color.White;
-            this.buttonProdutos.Location = new System.Drawing.Point(0, 59);
-            this.buttonProdutos.Name = "buttonProdutos";
-            this.buttonProdutos.Size = new System.Drawing.Size(148, 47);
-            this.buttonProdutos.TabIndex = 0;
-            this.buttonProdutos.Text = "Produtos";
-            this.buttonProdutos.UseVisualStyleBackColor = false;
-            this.buttonProdutos.Click += new System.EventHandler(this.buttonProdutos_Click);
             // 
             // FormClientes
             // 

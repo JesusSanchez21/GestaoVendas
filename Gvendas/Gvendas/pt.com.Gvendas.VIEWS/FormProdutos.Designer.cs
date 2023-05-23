@@ -231,6 +231,7 @@ namespace Gvendas.pt.com.Gvendas.VIEWS
             this.buttonEncomendas.TabIndex = 3;
             this.buttonEncomendas.Text = "Encomendas";
             this.buttonEncomendas.UseVisualStyleBackColor = false;
+            this.buttonEncomendas.Click += new System.EventHandler(this.buttonEncomendas_Click);
             // 
             // buttonFornecedores
             // 
@@ -307,6 +308,7 @@ namespace Gvendas.pt.com.Gvendas.VIEWS
             this.Controls.Add(this.labelNome);
             this.Controls.Add(this.panel1);
             this.Name = "FormProdutos";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Produtos";
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);

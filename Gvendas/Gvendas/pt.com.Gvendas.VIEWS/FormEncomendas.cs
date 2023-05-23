@@ -1,21 +1,21 @@
-﻿using Gvendas.pt.com.Gvendas.CONEXAO.Pasta;
-using Gvendas.pt.com.Gvendas.DAO.SQL;
+﻿using Gvendas.pt.com.Gvendas.DAO.SQL;
 using System;
 using System.Data.Common;
 using System.Windows.Forms;
 
-namespace Gvendas
+namespace Gvendas.pt.com.Gvendas.VIEWS
 {
-    public partial class FormClientes : Form
+    public partial class FormEncomendas : Form
     {
         public int SQLAction { get; set; }
-        public FormClientes(int sqlAction = 0)
+
+        public FormEncomendas(int sqlAction = 0)
         {
             SQLAction = sqlAction;
             InitializeComponent();
         }
 
-        private void FormClientes_Load(object sender, EventArgs e)
+        private void FormFuncionarios_Load(object sender, EventArgs e)
         {
             switch (SQLAction)
             {
@@ -42,15 +42,29 @@ namespace Gvendas
             textBoxTelefone.Enabled = false;
         }
 
+
+
+        private void buttonCancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
         private void buttonSalvar_Click(object sender, EventArgs e)
         {
-            Cliente cliente = new Cliente
+            switch (SQLAction)
             {
-                Nome = textBoxNome.Text,
-                Email = textBoxEmail.Text,
-                Morada = textBoxMorada.Text,
-                Telefone = int.Parse(textBoxTelefone.Text)
-            };
+                case 1:
+                    if (formValid())
+                    {
+                        //SQLClientes.Insert()
+                    }
+                    break;
+            }
+        }
+
+        private bool formValid()
+        {
+            throw new NotImplementedException();
         }
 
         private void buttonTestDB_Click(object sender, EventArgs e)
@@ -65,48 +79,41 @@ namespace Gvendas
             else
             {
                 MessageBox.Show("Ligação DB com erro", "DB não ligada", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
+
             }
         }
 
-        // Botões side menu
+        //Botões Side menu
 
         private void buttonFuncionarios_Click(object sender, EventArgs e)
         {
-
-            pt.com.Gvendas.VIEWS.FormFuncionarios form = new pt.com.Gvendas.VIEWS.FormFuncionarios(2);
+            this.Close();
+            FormFuncionarios form = new FormFuncionarios(2);
 
             form.ShowDialog();
-            this.Close();
 
         }
-        private void buttonProdutos_Click(object sender, EventArgs e)
+
+        private void buttonClientes_Click(object sender, EventArgs e)
         {
-            pt.com.Gvendas.VIEWS.FormProdutos form = new pt.com.Gvendas.VIEWS.FormProdutos();
-
+            FormClientes form = new FormClientes(2);
             form.ShowDialog();
             this.Close();
-            
         }
-
         private void buttonFornecedores_Click(object sender, EventArgs e)
         {
-            pt.com.Gvendas.VIEWS.FormFornecedores form = new pt.com.Gvendas.VIEWS.FormFornecedores();
+            FormFornecedores form = new FormFornecedores();
             form.ShowDialog();
             this.Close();
         }
 
-        private void buttonFornecedores_Click_1(object sender, EventArgs e)
+        private void buttonProdutos_Click(object sender, EventArgs e)
         {
-            pt.com.Gvendas.VIEWS.FormFornecedores form = new pt.com.Gvendas.VIEWS.FormFornecedores();
-            form.ShowDialog();
-            this.Close();
-        }
+            FormProdutos form = new FormProdutos();
 
-        private void buttonEncomendas_Click(object sender, EventArgs e)
-        {
-            pt.com.Gvendas.VIEWS.FormEncomendas form = new pt.com.Gvendas.VIEWS.FormEncomendas();
             form.ShowDialog();
             this.Close();
         }
     }
 }
+

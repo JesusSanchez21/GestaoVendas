@@ -100,17 +100,18 @@ namespace Gvendas.pt.com.Gvendas.VIEWS
             form.ShowDialog();
             this.Close();
         }
-        private void buttonFornecedores_Click(object sender, EventArgs e)
-        {
-            FormFornecedores form = new FormFornecedores();
-            form.ShowDialog();
-            this.Close();
-        }
 
         private void buttonProdutos_Click(object sender, EventArgs e)
         {
             FormProdutos form = new FormProdutos();
 
+            form.ShowDialog();
+            this.Close();
+        }
+
+        private void buttonEncomendas_Click(object sender, EventArgs e)
+        {
+            FormEncomendas form = new FormEncomendas();
             form.ShowDialog();
             this.Close();
         }
