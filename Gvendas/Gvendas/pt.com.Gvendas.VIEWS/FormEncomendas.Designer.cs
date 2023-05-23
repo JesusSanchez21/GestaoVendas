@@ -229,6 +229,7 @@ namespace Gvendas.pt.com.Gvendas.VIEWS
             this.buttonFornecedores.TabIndex = 10;
             this.buttonFornecedores.Text = "Fornecedores";
             this.buttonFornecedores.UseVisualStyleBackColor = false;
+            this.buttonFornecedores.Click += new System.EventHandler(this.buttonFornecedores_Click);
             // 
             // buttonFuncionarios
             // 
@@ -244,6 +245,7 @@ namespace Gvendas.pt.com.Gvendas.VIEWS
             this.buttonFuncionarios.TabIndex = 9;
             this.buttonFuncionarios.Text = "Funcionarios";
             this.buttonFuncionarios.UseVisualStyleBackColor = false;
+            this.buttonFuncionarios.Click += new System.EventHandler(this.buttonFuncionarios_Click);
             // 
             // buttonClientes
             // 
@@ -259,6 +261,7 @@ namespace Gvendas.pt.com.Gvendas.VIEWS
             this.buttonClientes.TabIndex = 8;
             this.buttonClientes.Text = "Clientes";
             this.buttonClientes.UseVisualStyleBackColor = false;
+            this.buttonClientes.Click += new System.EventHandler(this.buttonClientes_Click);
             // 
             // buttonProdutos
             // 
@@ -274,6 +277,7 @@ namespace Gvendas.pt.com.Gvendas.VIEWS
             this.buttonProdutos.TabIndex = 7;
             this.buttonProdutos.Text = "Produtos";
             this.buttonProdutos.UseVisualStyleBackColor = false;
+            this.buttonProdutos.Click += new System.EventHandler(this.buttonProdutos_Click);
             // 
             // panel2
             // 
