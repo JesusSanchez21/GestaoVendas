@@ -68,13 +68,38 @@ namespace Gvendas
             }
         }
 
+        // Botões side menu
+
         private void buttonFuncionarios_Click(object sender, EventArgs e)
         {
 
-            Gvendas.pt.com.Gvendas.VIEWS.FormFuncionarios form = new Gvendas.pt.com.Gvendas.VIEWS.FormFuncionarios(2);
+            pt.com.Gvendas.VIEWS.FormFuncionarios form = new pt.com.Gvendas.VIEWS.FormFuncionarios(2);
 
-                form.ShowDialog();
+            form.ShowDialog();
+            this.Close();
+
+        }
+        private void buttonProdutos_Click(object sender, EventArgs e)
+        {
+            pt.com.Gvendas.VIEWS.FormProdutos form = new pt.com.Gvendas.VIEWS.FormProdutos();
+
+            form.ShowDialog();
+            this.Close();
             
+        }
+
+        private void buttonFornecedores_Click(object sender, EventArgs e)
+        {
+            pt.com.Gvendas.VIEWS.FormFornecedores form = new pt.com.Gvendas.VIEWS.FormFornecedores();
+            form.ShowDialog();
+            this.Close();
+        }
+
+        private void buttonFornecedores_Click_1(object sender, EventArgs e)
+        {
+            pt.com.Gvendas.VIEWS.FormFornecedores form = new pt.com.Gvendas.VIEWS.FormFornecedores();
+            form.ShowDialog();
+            this.Close();
         }
     }
 }

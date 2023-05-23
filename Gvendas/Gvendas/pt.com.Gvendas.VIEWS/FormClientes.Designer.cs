@@ -34,21 +34,19 @@
             this.buttonEncomendas = new System.Windows.Forms.Button();
             this.buttonFornecedores = new System.Windows.Forms.Button();
             this.buttonFuncionarios = new System.Windows.Forms.Button();
-            this.buttonProdutos = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.labelNome = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.buttonSalvar = new System.Windows.Forms.Button();
             this.textBoxNome = new System.Windows.Forms.TextBox();
             this.textBoxTelefone = new System.Windows.Forms.TextBox();
             this.textBoxEmail = new System.Windows.Forms.TextBox();
             this.textBoxMorada = new System.Windows.Forms.TextBox();
-            this.buttonNovo = new System.Windows.Forms.Button();
-            this.buttonEditar = new System.Windows.Forms.Button();
-            this.buttonRemover = new System.Windows.Forms.Button();
             this.buttonTestDB = new System.Windows.Forms.Button();
+            this.buttonCancel = new System.Windows.Forms.Button();
+            this.buttonSalvar = new System.Windows.Forms.Button();
+            this.buttonProdutos = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -128,6 +126,7 @@
             this.buttonFornecedores.TabIndex = 2;
             this.buttonFornecedores.Text = "Fornecedores";
             this.buttonFornecedores.UseVisualStyleBackColor = false;
+            this.buttonFornecedores.Click += new System.EventHandler(this.buttonFornecedores_Click_1);
             // 
             // buttonFuncionarios
             // 
@@ -144,21 +143,6 @@
             this.buttonFuncionarios.Text = "Funcionarios";
             this.buttonFuncionarios.UseVisualStyleBackColor = false;
             this.buttonFuncionarios.Click += new System.EventHandler(this.buttonFuncionarios_Click);
-            // 
-            // buttonProdutos
-            // 
-            this.buttonProdutos.BackColor = System.Drawing.Color.Gray;
-            this.buttonProdutos.Dock = System.Windows.Forms.DockStyle.Top;
-            this.buttonProdutos.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.buttonProdutos.FlatAppearance.BorderSize = 2;
-            this.buttonProdutos.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonProdutos.ForeColor = System.Drawing.Color.White;
-            this.buttonProdutos.Location = new System.Drawing.Point(0, 59);
-            this.buttonProdutos.Name = "buttonProdutos";
-            this.buttonProdutos.Size = new System.Drawing.Size(148, 47);
-            this.buttonProdutos.TabIndex = 0;
-            this.buttonProdutos.Text = "Produtos";
-            this.buttonProdutos.UseVisualStyleBackColor = false;
             // 
             // panel2
             // 
@@ -209,22 +193,6 @@
             this.label3.TabIndex = 4;
             this.label3.Text = "Morada:";
             // 
-            // buttonSalvar
-            // 
-            this.buttonSalvar.BackColor = System.Drawing.Color.Gray;
-            this.buttonSalvar.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.buttonSalvar.FlatAppearance.BorderSize = 2;
-            this.buttonSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonSalvar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonSalvar.ForeColor = System.Drawing.Color.White;
-            this.buttonSalvar.Location = new System.Drawing.Point(195, 248);
-            this.buttonSalvar.Name = "buttonSalvar";
-            this.buttonSalvar.Size = new System.Drawing.Size(80, 39);
-            this.buttonSalvar.TabIndex = 6;
-            this.buttonSalvar.Text = "Salvar";
-            this.buttonSalvar.UseVisualStyleBackColor = false;
-            this.buttonSalvar.Click += new System.EventHandler(this.buttonSalvar_Click);
-            // 
             // textBoxNome
             // 
             this.textBoxNome.BackColor = System.Drawing.Color.Gainsboro;
@@ -257,51 +225,6 @@
             this.textBoxMorada.Size = new System.Drawing.Size(100, 20);
             this.textBoxMorada.TabIndex = 10;
             // 
-            // buttonNovo
-            // 
-            this.buttonNovo.BackColor = System.Drawing.Color.Gray;
-            this.buttonNovo.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.buttonNovo.FlatAppearance.BorderSize = 2;
-            this.buttonNovo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonNovo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonNovo.ForeColor = System.Drawing.Color.White;
-            this.buttonNovo.Location = new System.Drawing.Point(428, 319);
-            this.buttonNovo.Name = "buttonNovo";
-            this.buttonNovo.Size = new System.Drawing.Size(80, 39);
-            this.buttonNovo.TabIndex = 11;
-            this.buttonNovo.Text = "Novo";
-            this.buttonNovo.UseVisualStyleBackColor = false;
-            // 
-            // buttonEditar
-            // 
-            this.buttonEditar.BackColor = System.Drawing.Color.Gray;
-            this.buttonEditar.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.buttonEditar.FlatAppearance.BorderSize = 2;
-            this.buttonEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonEditar.ForeColor = System.Drawing.Color.White;
-            this.buttonEditar.Location = new System.Drawing.Point(428, 248);
-            this.buttonEditar.Name = "buttonEditar";
-            this.buttonEditar.Size = new System.Drawing.Size(80, 39);
-            this.buttonEditar.TabIndex = 12;
-            this.buttonEditar.Text = "Editar";
-            this.buttonEditar.UseVisualStyleBackColor = false;
-            // 
-            // buttonRemover
-            // 
-            this.buttonRemover.BackColor = System.Drawing.Color.Gray;
-            this.buttonRemover.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.buttonRemover.FlatAppearance.BorderSize = 2;
-            this.buttonRemover.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonRemover.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonRemover.ForeColor = System.Drawing.Color.White;
-            this.buttonRemover.Location = new System.Drawing.Point(195, 319);
-            this.buttonRemover.Name = "buttonRemover";
-            this.buttonRemover.Size = new System.Drawing.Size(80, 39);
-            this.buttonRemover.TabIndex = 13;
-            this.buttonRemover.Text = "Remover";
-            this.buttonRemover.UseVisualStyleBackColor = false;
-            // 
             // buttonTestDB
             // 
             this.buttonTestDB.BackColor = System.Drawing.Color.Gray;
@@ -318,20 +241,64 @@
             this.buttonTestDB.UseVisualStyleBackColor = false;
             this.buttonTestDB.Click += new System.EventHandler(this.buttonTestDB_Click);
             // 
+            // buttonCancel
+            // 
+            this.buttonCancel.BackColor = System.Drawing.Color.Gray;
+            this.buttonCancel.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.buttonCancel.FlatAppearance.BorderSize = 2;
+            this.buttonCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonCancel.ForeColor = System.Drawing.Color.White;
+            this.buttonCancel.Location = new System.Drawing.Point(486, 350);
+            this.buttonCancel.Name = "buttonCancel";
+            this.buttonCancel.Size = new System.Drawing.Size(80, 39);
+            this.buttonCancel.TabIndex = 27;
+            this.buttonCancel.Text = "Cancelar";
+            this.buttonCancel.UseVisualStyleBackColor = false;
+            // 
+            // buttonSalvar
+            // 
+            this.buttonSalvar.BackColor = System.Drawing.Color.Gray;
+            this.buttonSalvar.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.buttonSalvar.FlatAppearance.BorderSize = 2;
+            this.buttonSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonSalvar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonSalvar.ForeColor = System.Drawing.Color.White;
+            this.buttonSalvar.Location = new System.Drawing.Point(372, 350);
+            this.buttonSalvar.Name = "buttonSalvar";
+            this.buttonSalvar.Size = new System.Drawing.Size(80, 39);
+            this.buttonSalvar.TabIndex = 26;
+            this.buttonSalvar.Text = "Salvar";
+            this.buttonSalvar.UseVisualStyleBackColor = false;
+            // 
+            // buttonProdutos
+            // 
+            this.buttonProdutos.BackColor = System.Drawing.Color.Gray;
+            this.buttonProdutos.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonProdutos.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.buttonProdutos.FlatAppearance.BorderSize = 2;
+            this.buttonProdutos.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonProdutos.ForeColor = System.Drawing.Color.White;
+            this.buttonProdutos.Location = new System.Drawing.Point(0, 59);
+            this.buttonProdutos.Name = "buttonProdutos";
+            this.buttonProdutos.Size = new System.Drawing.Size(148, 47);
+            this.buttonProdutos.TabIndex = 0;
+            this.buttonProdutos.Text = "Produtos";
+            this.buttonProdutos.UseVisualStyleBackColor = false;
+            this.buttonProdutos.Click += new System.EventHandler(this.buttonProdutos_Click);
+            // 
             // FormClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
             this.ClientSize = new System.Drawing.Size(579, 397);
-            this.Controls.Add(this.buttonRemover);
-            this.Controls.Add(this.buttonEditar);
-            this.Controls.Add(this.buttonNovo);
+            this.Controls.Add(this.buttonCancel);
+            this.Controls.Add(this.buttonSalvar);
             this.Controls.Add(this.textBoxMorada);
             this.Controls.Add(this.textBoxEmail);
             this.Controls.Add(this.textBoxTelefone);
             this.Controls.Add(this.textBoxNome);
-            this.Controls.Add(this.buttonSalvar);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -341,6 +308,7 @@
             this.Padding = new System.Windows.Forms.Padding(1);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Clientes";
+            this.Click += new System.EventHandler(this.buttonSalvar_Click);
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -355,21 +323,19 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button buttonSalvar;
         private System.Windows.Forms.Button buttonEncomendas;
         private System.Windows.Forms.Button buttonFornecedores;
         private System.Windows.Forms.Button buttonFuncionarios;
-        private System.Windows.Forms.Button buttonProdutos;
         private System.Windows.Forms.TextBox textBoxNome;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.TextBox textBoxTelefone;
         private System.Windows.Forms.TextBox textBoxEmail;
         private System.Windows.Forms.TextBox textBoxMorada;
-        private System.Windows.Forms.Button buttonNovo;
-        private System.Windows.Forms.Button buttonEditar;
-        private System.Windows.Forms.Button buttonRemover;
         private System.Windows.Forms.Button buttonTestDB;
+        private System.Windows.Forms.Button buttonCancel;
+        private System.Windows.Forms.Button buttonSalvar;
+        private System.Windows.Forms.Button buttonProdutos;
     }
 }
 

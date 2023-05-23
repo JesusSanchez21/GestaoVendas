@@ -1,5 +1,4 @@
-﻿using Gvendas.pt.com.Gvendas.CONEXAO.Pasta;
-using Gvendas.pt.com.Gvendas.DAO.SQL;
+﻿using Gvendas.pt.com.Gvendas.DAO.SQL;
 using System;
 using System.Data.Common;
 using System.Windows.Forms;
@@ -43,7 +42,7 @@ namespace Gvendas.pt.com.Gvendas.VIEWS
             textBoxTelefone.Enabled = false;
         }
 
-        
+
 
         private void buttonCancel_Click(object sender, EventArgs e)
         {
@@ -55,7 +54,7 @@ namespace Gvendas.pt.com.Gvendas.VIEWS
             switch (SQLAction)
             {
                 case 1:
-                    if(formValid())
+                    if (formValid())
                     {
                         //SQLClientes.Insert()
                     }
@@ -76,19 +75,38 @@ namespace Gvendas.pt.com.Gvendas.VIEWS
             if (connectionIsSuccess != null)
             {
                 MessageBox.Show("Ligação DB com sucesso", "DB ligada com sucesso", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
-            } else
+            }
+            else
             {
                 MessageBox.Show("Ligação DB com erro", "DB não ligada", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
 
             }
         }
 
+        //Botões Side menu
+
         private void buttonClientes_Click(object sender, EventArgs e)
         {
-            
-                FormClientes form = new FormClientes(2);
 
-                form.ShowDialog();
+            FormClientes form = new FormClientes(2);
+
+            form.ShowDialog();
+            this.Close();
+        }
+
+        private void buttonProdutos_Click(object sender, EventArgs e)
+        {
+            FormProdutos form = new FormProdutos();
+
+            form.ShowDialog();
+            this.Close();
+        }
+
+        private void buttonFornecedores_Click(object sender, EventArgs e)
+        {
+            FormFornecedores form = new FormFornecedores();
+            form.ShowDialog();
+            this.Close();
         }
     }
 }

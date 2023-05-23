@@ -247,6 +247,7 @@ namespace Gvendas.pt.com.Gvendas.VIEWS
             this.buttonFornecedores.TabIndex = 2;
             this.buttonFornecedores.Text = "Fornecedores";
             this.buttonFornecedores.UseVisualStyleBackColor = false;
+            this.buttonFornecedores.Click += new System.EventHandler(this.buttonFornecedores_Click);
             // 
             // buttonClientes
             // 
@@ -278,6 +279,7 @@ namespace Gvendas.pt.com.Gvendas.VIEWS
             this.buttonProdutos.TabIndex = 0;
             this.buttonProdutos.Text = "Produtos";
             this.buttonProdutos.UseVisualStyleBackColor = false;
+            this.buttonProdutos.Click += new System.EventHandler(this.buttonProdutos_Click);
             // 
             // panel2
             // 
