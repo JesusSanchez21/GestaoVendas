@@ -1,5 +1,6 @@
 ﻿using Gvendas.pt.com.Gvendas.CONEXAO.Pasta;
 using Gvendas.pt.com.Gvendas.DAO.SQL;
+using Gvendas.pt.com.Gvendas.VIEWS;
 using System;
 using System.Data.Common;
 using System.Windows.Forms;
@@ -106,6 +107,18 @@ namespace Gvendas
         {
             pt.com.Gvendas.VIEWS.FormEncomendas form = new pt.com.Gvendas.VIEWS.FormEncomendas();
             form.ShowDialog();
+            this.Close();
+        }
+
+        private void buttonHome_Click(object sender, EventArgs e)
+        {
+            FormHome form = new FormHome();
+            form.ShowDialog();
+            this.Close();
+        }
+
+        private void buttonCancel_Click(object sender, EventArgs e)
+        {
             this.Close();
         }
     }

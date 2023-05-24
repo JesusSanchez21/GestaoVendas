@@ -61,6 +61,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="pt.com.Gvendas.CONEXAO\SQLClientes.cs" />
     <Compile Include="pt.com.Gvendas.DAO\SQL\SqLConnection.cs" />
     <Compile Include="pt.com.Gvendas.MODEL\Cliente.cs" />
@@ -95,6 +100,24 @@
     <Compile Include="pt.com.Gvendas.VIEWS\FormFuncionarios.Designer.cs">
       <DependentUpon>FormFuncionarios.cs</DependentUpon>
     </Compile>
+    <Compile Include="pt.com.Gvendas.VIEWS\FormHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pt.com.Gvendas.VIEWS\FormHome.Designer.cs">
+      <DependentUpon>FormHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="pt.com.Gvendas.VIEWS\FormListClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pt.com.Gvendas.VIEWS\FormListClientes.Designer.cs">
+      <DependentUpon>FormListClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="pt.com.Gvendas.VIEWS\FormManipularDados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pt.com.Gvendas.VIEWS\FormManipularDados.Designer.cs">
+      <DependentUpon>FormManipularDados.cs</DependentUpon>
+    </Compile>
     <Compile Include="pt.com.Gvendas.VIEWS\FormProdutos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -106,13 +129,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="pt.com.Gvendas.VIEWS\FormEncomendas.resx">
       <DependentUpon>FormEncomendas.cs</DependentUpon>
     </EmbeddedResource>
@@ -121,6 +140,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="pt.com.Gvendas.VIEWS\FormFuncionarios.resx">
       <DependentUpon>FormFuncionarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pt.com.Gvendas.VIEWS\FormHome.resx">
+      <DependentUpon>FormHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pt.com.Gvendas.VIEWS\FormListClientes.resx">
+      <DependentUpon>FormListClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pt.com.Gvendas.VIEWS\FormManipularDados.resx">
+      <DependentUpon>FormManipularDados.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="pt.com.Gvendas.VIEWS\FormProdutos.resx">
       <DependentUpon>FormProdutos.cs</DependentUpon>
@@ -158,9 +186,13 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>DatabaseSGV.mdf</DependentUpon>
     </Content>
+    <None Include="Resources\JDB.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="pt.com.Gvendas.CONEXAO\Pasta\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

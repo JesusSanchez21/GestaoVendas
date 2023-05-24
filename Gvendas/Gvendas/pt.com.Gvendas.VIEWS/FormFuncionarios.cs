@@ -115,5 +115,12 @@ namespace Gvendas.pt.com.Gvendas.VIEWS
             form.ShowDialog();
             this.Close();
         }
+
+        private void buttonHome_Click(object sender, EventArgs e)
+        {
+            FormHome form = new FormHome();
+            form.ShowDialog();
+            this.Close();
+        }
     }
 }

@@ -48,7 +48,9 @@ namespace Gvendas.pt.com.Gvendas.VIEWS
             this.buttonClientes = new System.Windows.Forms.Button();
             this.buttonFuncionarios = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.buttonHome = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // buttonCancel
@@ -284,11 +286,28 @@ namespace Gvendas.pt.com.Gvendas.VIEWS
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.DimGray;
+            this.panel2.Controls.Add(this.buttonHome);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(148, 59);
             this.panel2.TabIndex = 0;
+            // 
+            // buttonHome
+            // 
+            this.buttonHome.BackColor = System.Drawing.Color.Gray;
+            this.buttonHome.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.buttonHome.FlatAppearance.BorderSize = 2;
+            this.buttonHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonHome.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonHome.ForeColor = System.Drawing.Color.White;
+            this.buttonHome.Location = new System.Drawing.Point(14, 10);
+            this.buttonHome.Name = "buttonHome";
+            this.buttonHome.Size = new System.Drawing.Size(121, 39);
+            this.buttonHome.TabIndex = 28;
+            this.buttonHome.Text = "Home";
+            this.buttonHome.UseVisualStyleBackColor = false;
+            this.buttonHome.Click += new System.EventHandler(this.buttonHome_Click);
             // 
             // FormProdutos
             // 
@@ -311,6 +330,7 @@ namespace Gvendas.pt.com.Gvendas.VIEWS
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Produtos";
             this.panel1.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -337,5 +357,6 @@ namespace Gvendas.pt.com.Gvendas.VIEWS
         private System.Windows.Forms.Button buttonClientes;
         private System.Windows.Forms.Button buttonFuncionarios;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button buttonHome;
     }
 }
