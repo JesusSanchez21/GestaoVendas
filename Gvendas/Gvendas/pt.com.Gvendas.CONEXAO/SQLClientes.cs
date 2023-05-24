@@ -1,4 +1,6 @@
-﻿using System.Data;
+﻿using System;
+using System.Collections.Generic;
+using System.Data;
 using System.Data.Common;
 using System.Data.SqlClient;
 using static Gvendas.pt.com.Gvendas.DAO.SQL.SqLConnection;
@@ -38,6 +40,54 @@ namespace Gvendas.pt.com.Gvendas.CONEXAO.Pasta
 
                 throw new System.Exception(ex.Message, ex.InnerException);
             }
+        }
+
+        internal static List<Cliente> getAll()
+        {
+            List<Cliente> clientes = new List<Cliente>();
+            Cliente cliente = null;
+
+
+            try
+            {
+                //open connection to database
+                using (DbConnection conn = OpenConnection())
+                {
+                    //instance to allow sql commands
+                    using (SqlCommand sqlCommand = ((SqlConnection)conn).CreateCommand())
+                    {
+                        string query = "Select * from clientes;";
+                        //defining commmand type
+                        sqlCommand.CommandText = query;
+                        sqlCommand.CommandType = CommandType.Text;
+                        sqlCommand.Connection = ((SqlConnection)conn);
+
+
+                        using (SqlDataReader reader = sqlCommand.ExecuteReader())
+                        {
+
+                            while (reader.Read())
+                            {
+                                cliente = new Cliente(
+                                    reader.GetInt32(reader.GetOrdinal("ID")),
+                                    reader["Nome"].ToString(),                                    
+                                    reader["Morada"].ToString(),
+                                    reader["Email"].ToString(),
+                                    int.Parse(reader["Telefone"].ToString())
+                                    );
+                                clientes.Add(cliente);
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Um erro ocorreu -  contacte do administrador de sistema." + ex.Message);
+                return null;
+            }
+
+            return clientes;
         }
     }
 }
