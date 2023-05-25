@@ -17,7 +17,7 @@ namespace Gvendas.pt.com.Gvendas.DAO.SQL
         static internal SqlConnection conn_sqlserver = null;
         public static string clipboardText = null;
         // LocalDB -Instância local SQL Server express do Visual Studio.
-        static private readonly string sqlConnStringBdLocal = $@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename={projectDirectory}\pt.com.Gvendas.CONEXAO\DatabaseSGV.mdf;Integrated Security=True";
+        static private readonly string sqlConnStringBdLocal = $@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename={projectDirectory}\pt.com.Gvendas.CONEXAO\Database.mdf;Integrated Security=True";
 
 
         static internal DbConnection OpenConnection()

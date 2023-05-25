@@ -18,8 +18,9 @@ namespace Gvendas.pt.com.Gvendas.VIEWS
 
         public int Table { get; set; }
 
-        public FormListClientes()
+        public FormListClientes(int table)
         {
+            Table = table;
             InitializeComponent();
         }
 
@@ -48,10 +49,10 @@ namespace Gvendas.pt.com.Gvendas.VIEWS
                     // Definição das colunas da listview. 
                     // NOTA: Os valores percentuais da largura das colunas tem de somar 100
                     listView.Columns[0].Width = (5 * listView.Width) / 100; // ID -> sempre escondido
-                    listView.Columns[1].Width = (40 * listView.Width) / 100;
-                    listView.Columns[2].Width = (55 * listView.Width) / 100;
-                    listView.Columns[3].Width = 0;
-                    listView.Columns[4].Width = 0; // Coluna não usada
+                    listView.Columns[1].Width = (10 * listView.Width) / 100;
+                    listView.Columns[2].Width = (15 * listView.Width) / 100;
+                    listView.Columns[3].Width = (15 * listView.Width) / 100;
+                    listView.Columns[4].Width = (15 * listView.Width) / 100;
 
                     foreach (Cliente cliente in clienteLista)
                     {

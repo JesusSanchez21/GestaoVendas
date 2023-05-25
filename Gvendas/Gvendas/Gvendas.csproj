@@ -67,6 +67,8 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="pt.com.Gvendas.CONEXAO\SQLClientes.cs" />
+    <Compile Include="pt.com.Gvendas.CONEXAO\SQLEncomendas.cs" />
+    <Compile Include="pt.com.Gvendas.CONEXAO\SQLFuncionarios.cs" />
     <Compile Include="pt.com.Gvendas.DAO\SQL\SqLConnection.cs" />
     <Compile Include="pt.com.Gvendas.MODEL\Cliente.cs" />
     <Compile Include="pt.com.Gvendas.VIEWS\FormClientes.cs">
@@ -197,20 +199,20 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="pt.com.Gvendas.CONEXAO\DatabaseSGV.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="pt.com.Gvendas.CONEXAO\DatabaseSGV_log.ldf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <DependentUpon>DatabaseSGV.mdf</DependentUpon>
-    </Content>
     <None Include="Resources\JDB.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="pt.com.Gvendas.CONEXAO\Pasta\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="pt.com.Gvendas.CONEXAO\Database.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="pt.com.Gvendas.CONEXAO\Database_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>Database.mdf</DependentUpon>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

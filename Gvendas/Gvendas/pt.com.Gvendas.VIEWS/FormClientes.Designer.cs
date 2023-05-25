@@ -37,6 +37,7 @@
             this.buttonFuncionarios = new System.Windows.Forms.Button();
             this.buttonProdutos = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.buttonHome = new System.Windows.Forms.Button();
             this.labelNome = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -47,7 +48,6 @@
             this.textBoxMorada = new System.Windows.Forms.TextBox();
             this.buttonCancel = new System.Windows.Forms.Button();
             this.buttonSalvar = new System.Windows.Forms.Button();
-            this.buttonHome = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -189,6 +189,22 @@
             this.panel2.Size = new System.Drawing.Size(148, 59);
             this.panel2.TabIndex = 0;
             // 
+            // buttonHome
+            // 
+            this.buttonHome.BackColor = System.Drawing.Color.Gray;
+            this.buttonHome.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.buttonHome.FlatAppearance.BorderSize = 2;
+            this.buttonHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonHome.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonHome.ForeColor = System.Drawing.Color.White;
+            this.buttonHome.Location = new System.Drawing.Point(14, 10);
+            this.buttonHome.Name = "buttonHome";
+            this.buttonHome.Size = new System.Drawing.Size(121, 39);
+            this.buttonHome.TabIndex = 27;
+            this.buttonHome.Text = "Home";
+            this.buttonHome.UseVisualStyleBackColor = false;
+            this.buttonHome.Click += new System.EventHandler(this.buttonHome_Click);
+            // 
             // labelNome
             // 
             this.labelNome.AutoSize = true;
@@ -291,22 +307,7 @@
             this.buttonSalvar.TabIndex = 26;
             this.buttonSalvar.Text = "Salvar";
             this.buttonSalvar.UseVisualStyleBackColor = false;
-            // 
-            // buttonHome
-            // 
-            this.buttonHome.BackColor = System.Drawing.Color.Gray;
-            this.buttonHome.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.buttonHome.FlatAppearance.BorderSize = 2;
-            this.buttonHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonHome.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonHome.ForeColor = System.Drawing.Color.White;
-            this.buttonHome.Location = new System.Drawing.Point(14, 10);
-            this.buttonHome.Name = "buttonHome";
-            this.buttonHome.Size = new System.Drawing.Size(121, 39);
-            this.buttonHome.TabIndex = 27;
-            this.buttonHome.Text = "Home";
-            this.buttonHome.UseVisualStyleBackColor = false;
-            this.buttonHome.Click += new System.EventHandler(this.buttonHome_Click);
+            this.buttonSalvar.Click += new System.EventHandler(this.buttonSalvar_Click);
             // 
             // FormClientes
             // 

@@ -14,14 +14,21 @@ namespace Gvendas.pt.com.Gvendas.VIEWS
 
         private void button3_Click(object sender, EventArgs e)
         {
-            this.Close();
+             
         }
 
         private void buttonManipular_Click(object sender, EventArgs e)
         {
             FormManipularDados form = new FormManipularDados();
             form.ShowDialog();
-            this.Close();
+             
+        }
+
+        private void buttonVerDados_Click(object sender, EventArgs e)
+        {
+            FormListClientes form = new FormListClientes(1);
+            form.ShowDialog();
+             
         }
     }
 }

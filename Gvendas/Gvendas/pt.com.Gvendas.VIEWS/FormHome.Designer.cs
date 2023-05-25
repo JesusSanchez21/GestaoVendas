@@ -70,6 +70,7 @@
             this.buttonVerDados.TabIndex = 31;
             this.buttonVerDados.Text = "Ver Dados";
             this.buttonVerDados.UseVisualStyleBackColor = false;
+            this.buttonVerDados.Click += new System.EventHandler(this.buttonVerDados_Click);
             // 
             // buttonManipular
             // 

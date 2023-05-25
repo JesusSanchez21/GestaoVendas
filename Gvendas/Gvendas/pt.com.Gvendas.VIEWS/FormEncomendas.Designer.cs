@@ -186,6 +186,7 @@ namespace Gvendas.pt.com.Gvendas.VIEWS
             this.buttonTestDB.TabIndex = 13;
             this.buttonTestDB.Text = "TestDB";
             this.buttonTestDB.UseVisualStyleBackColor = false;
+            this.buttonTestDB.Click += new System.EventHandler(this.buttonTestDB_Click);
             // 
             // button7
             // 

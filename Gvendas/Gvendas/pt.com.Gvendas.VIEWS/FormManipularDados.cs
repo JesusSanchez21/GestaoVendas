@@ -12,14 +12,14 @@ namespace Gvendas.pt.com.Gvendas.VIEWS
 
         private void buttonCancelar_Click(object sender, EventArgs e)
         {
-            this.Close();
+             
         }
 
         private void buttonAdicionar_Click(object sender, EventArgs e)
         {
             FormEscolhaManipulacao form = new FormEscolhaManipulacao();
             form.ShowDialog();
-            this.Close();
+             
         }
 
         private void buttonEditar_Click(object sender, EventArgs e)

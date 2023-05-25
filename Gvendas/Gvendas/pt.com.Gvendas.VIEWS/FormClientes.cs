@@ -10,9 +10,13 @@ namespace Gvendas
     public partial class FormClientes : Form
     {
         public int SQLAction { get; set; }
-        public FormClientes(int sqlAction = 0)
+        public Cliente cliente { get; set; }
+
+
+        public FormClientes(int sqlAction, Cliente cliente)
         {
             SQLAction = sqlAction;
+            this.cliente = cliente;
             InitializeComponent();
         }
 
@@ -45,13 +49,34 @@ namespace Gvendas
 
         private void buttonSalvar_Click(object sender, EventArgs e)
         {
-            Cliente cliente = new Cliente
+            
+
+
+            if (formValid())
             {
-                Nome = textBoxNome.Text,
-                Email = textBoxEmail.Text,
-                Morada = textBoxMorada.Text,
-                Telefone = int.Parse(textBoxTelefone.Text)
-            };
+
+                Cliente cliente = new Cliente
+                {
+                    Nome = textBoxNome.Text,
+                    Email = textBoxEmail.Text,
+                    Morada = textBoxMorada.Text,
+                    Telefone = int.Parse(textBoxTelefone.Text)
+                };
+
+                SQLClientes.Insert(cliente);
+            }
+        }
+
+        private bool formValid()
+        {
+           if (String.IsNullOrEmpty(cliente.Nome))
+            {
+                MessageBox.Show("O campo nome não pode estar vazio.", "ERRO", 
+                    MessageBoxButtons.OKCancel, 
+                    MessageBoxIcon.Information);
+                return false;
+            }
+            return true; 
         }
 
         private void buttonTestDB_Click(object sender, EventArgs e)
@@ -77,7 +102,6 @@ namespace Gvendas
             pt.com.Gvendas.VIEWS.FormFuncionarios form = new pt.com.Gvendas.VIEWS.FormFuncionarios(2);
 
             form.ShowDialog();
-            this.Close();
 
         }
         private void buttonProdutos_Click(object sender, EventArgs e)
@@ -85,41 +109,36 @@ namespace Gvendas
             pt.com.Gvendas.VIEWS.FormProdutos form = new pt.com.Gvendas.VIEWS.FormProdutos();
 
             form.ShowDialog();
-            this.Close();
-            
+
         }
 
         private void buttonFornecedores_Click(object sender, EventArgs e)
         {
             pt.com.Gvendas.VIEWS.FormFornecedores form = new pt.com.Gvendas.VIEWS.FormFornecedores();
             form.ShowDialog();
-            this.Close();
         }
 
         private void buttonFornecedores_Click_1(object sender, EventArgs e)
         {
             pt.com.Gvendas.VIEWS.FormFornecedores form = new pt.com.Gvendas.VIEWS.FormFornecedores();
             form.ShowDialog();
-            this.Close();
         }
 
         private void buttonEncomendas_Click(object sender, EventArgs e)
         {
             pt.com.Gvendas.VIEWS.FormEncomendas form = new pt.com.Gvendas.VIEWS.FormEncomendas();
             form.ShowDialog();
-            this.Close();
         }
 
         private void buttonHome_Click(object sender, EventArgs e)
         {
             FormHome form = new FormHome();
             form.ShowDialog();
-            this.Close();
         }
 
         private void buttonCancel_Click(object sender, EventArgs e)
         {
-            this.Close();
+
         }
     }
 }

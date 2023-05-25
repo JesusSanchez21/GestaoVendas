@@ -47,7 +47,6 @@ namespace Gvendas.pt.com.Gvendas.CONEXAO.Pasta
             List<Cliente> clientes = new List<Cliente>();
             Cliente cliente = null;
 
-
             try
             {
                 //open connection to database
@@ -69,11 +68,11 @@ namespace Gvendas.pt.com.Gvendas.CONEXAO.Pasta
                             while (reader.Read())
                             {
                                 cliente = new Cliente(
-                                    reader.GetInt32(reader.GetOrdinal("ID")),
-                                    reader["Nome"].ToString(),                                    
-                                    reader["Morada"].ToString(),
-                                    reader["Email"].ToString(),
-                                    int.Parse(reader["Telefone"].ToString())
+                                    reader.GetInt32(reader.GetOrdinal("id")),
+                                    reader["nome"].ToString(),                                    
+                                    reader["morada"].ToString(),
+                                    reader["email"].ToString(),
+                                    int.Parse(reader["telefone"].ToString())
                                     );
                                 clientes.Add(cliente);
                             }

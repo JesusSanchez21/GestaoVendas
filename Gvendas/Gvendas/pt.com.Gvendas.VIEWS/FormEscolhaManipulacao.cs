@@ -14,9 +14,9 @@ namespace Gvendas.pt.com.Gvendas.VIEWS
 
         private void buttonClientes_Click(object sender, EventArgs e)
         {
-            FormClientes form = new FormClientes();
+            FormClientes form = new FormClientes(1, null);
             form.ShowDialog();
-            this.Close();
+             
         }
         private void buttonFuncionarios_Click(object sender, EventArgs e)
         {
@@ -24,7 +24,7 @@ namespace Gvendas.pt.com.Gvendas.VIEWS
             FormFuncionarios form = new FormFuncionarios(2);
 
             form.ShowDialog();
-            this.Close();
+             
 
         }
         private void buttonProdutos_Click(object sender, EventArgs e)
@@ -32,7 +32,7 @@ namespace Gvendas.pt.com.Gvendas.VIEWS
             FormProdutos form = new FormProdutos();
 
             form.ShowDialog();
-            this.Close();
+             
 
         }
 
@@ -40,21 +40,21 @@ namespace Gvendas.pt.com.Gvendas.VIEWS
         {
             FormFornecedores form = new FormFornecedores();
             form.ShowDialog();
-            this.Close();
+             
         }
 
         private void buttonEncomendas_Click(object sender, EventArgs e)
         {
             FormEncomendas form = new FormEncomendas();
             form.ShowDialog();
-            this.Close();
+             
         }
 
         private void buttonHome_Click(object sender, EventArgs e)
         {
             FormHome form = new FormHome();
             form.ShowDialog();
-            this.Close();
+             
         }
 
         private void buttonTestDB_Click(object sender, EventArgs e)
