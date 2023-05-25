@@ -51,6 +51,7 @@
             this.buttonRemover.TabIndex = 38;
             this.buttonRemover.Text = "Remover";
             this.buttonRemover.UseVisualStyleBackColor = false;
+            this.buttonRemover.Click += new System.EventHandler(this.buttonRemover_Click);
             // 
             // buttonEditar
             // 
@@ -66,6 +67,7 @@
             this.buttonEditar.TabIndex = 37;
             this.buttonEditar.Text = "Editar";
             this.buttonEditar.UseVisualStyleBackColor = false;
+            this.buttonEditar.Click += new System.EventHandler(this.buttonEditar_Click);
             // 
             // buttonAdicionar
             // 
@@ -81,6 +83,7 @@
             this.buttonAdicionar.TabIndex = 36;
             this.buttonAdicionar.Text = "Adicionar";
             this.buttonAdicionar.UseVisualStyleBackColor = false;
+            this.buttonAdicionar.Click += new System.EventHandler(this.buttonAdicionar_Click);
             // 
             // labelManipularDados
             // 

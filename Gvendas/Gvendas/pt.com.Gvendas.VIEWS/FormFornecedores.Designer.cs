@@ -30,14 +30,10 @@ namespace Gvendas.pt.com.Gvendas.VIEWS
         private void InitializeComponent()
         {
             this.buttonCancel = new System.Windows.Forms.Button();
-            this.textBoxMorada = new System.Windows.Forms.TextBox();
-            this.textBoxEmail = new System.Windows.Forms.TextBox();
-            this.textBoxTelefone = new System.Windows.Forms.TextBox();
+            this.textBoxNomeEmpresa = new System.Windows.Forms.TextBox();
             this.textBoxNome = new System.Windows.Forms.TextBox();
             this.buttonSalvar = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.labelNomeEmpresa = new System.Windows.Forms.Label();
             this.labelNome = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.buttonTestDB = new System.Windows.Forms.Button();
@@ -49,6 +45,8 @@ namespace Gvendas.pt.com.Gvendas.VIEWS
             this.buttonProdutos = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.buttonHome = new System.Windows.Forms.Button();
+            this.textBoxNumeroInterno = new System.Windows.Forms.TextBox();
+            this.labelNumeroInterno = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -68,34 +66,18 @@ namespace Gvendas.pt.com.Gvendas.VIEWS
             this.buttonCancel.Text = "Cancelar";
             this.buttonCancel.UseVisualStyleBackColor = false;
             // 
-            // textBoxMorada
+            // textBoxNomeEmpresa
             // 
-            this.textBoxMorada.BackColor = System.Drawing.Color.Gainsboro;
-            this.textBoxMorada.Location = new System.Drawing.Point(204, 179);
-            this.textBoxMorada.Name = "textBoxMorada";
-            this.textBoxMorada.Size = new System.Drawing.Size(100, 20);
-            this.textBoxMorada.TabIndex = 46;
-            // 
-            // textBoxEmail
-            // 
-            this.textBoxEmail.BackColor = System.Drawing.Color.Gainsboro;
-            this.textBoxEmail.Location = new System.Drawing.Point(418, 179);
-            this.textBoxEmail.Name = "textBoxEmail";
-            this.textBoxEmail.Size = new System.Drawing.Size(100, 20);
-            this.textBoxEmail.TabIndex = 45;
-            // 
-            // textBoxTelefone
-            // 
-            this.textBoxTelefone.BackColor = System.Drawing.Color.Gainsboro;
-            this.textBoxTelefone.Location = new System.Drawing.Point(418, 86);
-            this.textBoxTelefone.Name = "textBoxTelefone";
-            this.textBoxTelefone.Size = new System.Drawing.Size(100, 20);
-            this.textBoxTelefone.TabIndex = 44;
+            this.textBoxNomeEmpresa.BackColor = System.Drawing.Color.Gainsboro;
+            this.textBoxNomeEmpresa.Location = new System.Drawing.Point(415, 120);
+            this.textBoxNomeEmpresa.Name = "textBoxNomeEmpresa";
+            this.textBoxNomeEmpresa.Size = new System.Drawing.Size(100, 20);
+            this.textBoxNomeEmpresa.TabIndex = 44;
             // 
             // textBoxNome
             // 
             this.textBoxNome.BackColor = System.Drawing.Color.Gainsboro;
-            this.textBoxNome.Location = new System.Drawing.Point(204, 86);
+            this.textBoxNome.Location = new System.Drawing.Point(201, 120);
             this.textBoxNome.Name = "textBoxNome";
             this.textBoxNome.Size = new System.Drawing.Size(100, 20);
             this.textBoxNome.TabIndex = 43;
@@ -115,41 +97,21 @@ namespace Gvendas.pt.com.Gvendas.VIEWS
             this.buttonSalvar.Text = "Salvar";
             this.buttonSalvar.UseVisualStyleBackColor = false;
             // 
-            // label3
+            // labelNomeEmpresa
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(202, 151);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(60, 17);
-            this.label3.TabIndex = 41;
-            this.label3.Text = "Morada:";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(415, 60);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(68, 17);
-            this.label2.TabIndex = 40;
-            this.label2.Text = "Telefone:";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(416, 151);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(46, 17);
-            this.label1.TabIndex = 39;
-            this.label1.Text = "Email:";
+            this.labelNomeEmpresa.AutoSize = true;
+            this.labelNomeEmpresa.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelNomeEmpresa.Location = new System.Drawing.Point(412, 94);
+            this.labelNomeEmpresa.Name = "labelNomeEmpresa";
+            this.labelNomeEmpresa.Size = new System.Drawing.Size(109, 17);
+            this.labelNomeEmpresa.TabIndex = 40;
+            this.labelNomeEmpresa.Text = "Nome Empresa:";
             // 
             // labelNome
             // 
             this.labelNome.AutoSize = true;
             this.labelNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelNome.Location = new System.Drawing.Point(201, 60);
+            this.labelNome.Location = new System.Drawing.Point(198, 94);
             this.labelNome.Name = "labelNome";
             this.labelNome.Size = new System.Drawing.Size(49, 17);
             this.labelNome.TabIndex = 38;
@@ -308,21 +270,37 @@ namespace Gvendas.pt.com.Gvendas.VIEWS
             this.buttonHome.UseVisualStyleBackColor = false;
             this.buttonHome.Click += new System.EventHandler(this.buttonHome_Click);
             // 
+            // textBoxNumeroInterno
+            // 
+            this.textBoxNumeroInterno.BackColor = System.Drawing.Color.Gainsboro;
+            this.textBoxNumeroInterno.Location = new System.Drawing.Point(201, 209);
+            this.textBoxNumeroInterno.Name = "textBoxNumeroInterno";
+            this.textBoxNumeroInterno.Size = new System.Drawing.Size(100, 20);
+            this.textBoxNumeroInterno.TabIndex = 49;
+            // 
+            // labelNumeroInterno
+            // 
+            this.labelNumeroInterno.AutoSize = true;
+            this.labelNumeroInterno.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelNumeroInterno.Location = new System.Drawing.Point(198, 183);
+            this.labelNumeroInterno.Name = "labelNumeroInterno";
+            this.labelNumeroInterno.Size = new System.Drawing.Size(110, 17);
+            this.labelNumeroInterno.TabIndex = 48;
+            this.labelNumeroInterno.Text = "Numero Interno:";
+            // 
             // FormFornecedores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
             this.ClientSize = new System.Drawing.Size(579, 397);
+            this.Controls.Add(this.textBoxNumeroInterno);
+            this.Controls.Add(this.labelNumeroInterno);
             this.Controls.Add(this.buttonCancel);
-            this.Controls.Add(this.textBoxMorada);
-            this.Controls.Add(this.textBoxEmail);
-            this.Controls.Add(this.textBoxTelefone);
+            this.Controls.Add(this.textBoxNomeEmpresa);
             this.Controls.Add(this.textBoxNome);
             this.Controls.Add(this.buttonSalvar);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.labelNomeEmpresa);
             this.Controls.Add(this.labelNome);
             this.Controls.Add(this.panel1);
             this.Name = "FormFornecedores";
@@ -338,14 +316,10 @@ namespace Gvendas.pt.com.Gvendas.VIEWS
         #endregion
 
         private System.Windows.Forms.Button buttonCancel;
-        private System.Windows.Forms.TextBox textBoxMorada;
-        private System.Windows.Forms.TextBox textBoxEmail;
-        private System.Windows.Forms.TextBox textBoxTelefone;
+        private System.Windows.Forms.TextBox textBoxNomeEmpresa;
         private System.Windows.Forms.TextBox textBoxNome;
         private System.Windows.Forms.Button buttonSalvar;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label labelNomeEmpresa;
         private System.Windows.Forms.Label labelNome;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
@@ -357,5 +331,7 @@ namespace Gvendas.pt.com.Gvendas.VIEWS
         private System.Windows.Forms.Button buttonClientes;
         private System.Windows.Forms.Button buttonProdutos;
         private System.Windows.Forms.Button buttonHome;
+        private System.Windows.Forms.TextBox textBoxNumeroInterno;
+        private System.Windows.Forms.Label labelNumeroInterno;
     }
 }

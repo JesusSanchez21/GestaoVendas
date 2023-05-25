@@ -49,6 +49,8 @@ namespace Gvendas.pt.com.Gvendas.VIEWS
             this.buttonProdutos = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.buttonHome = new System.Windows.Forms.Button();
+            this.textBoxNumeroInterno = new System.Windows.Forms.TextBox();
+            this.labelNumeroInterno = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -310,12 +312,32 @@ namespace Gvendas.pt.com.Gvendas.VIEWS
             this.buttonHome.UseVisualStyleBackColor = false;
             this.buttonHome.Click += new System.EventHandler(this.buttonHome_Click);
             // 
+            // textBoxNumeroInterno
+            // 
+            this.textBoxNumeroInterno.BackColor = System.Drawing.Color.Gainsboro;
+            this.textBoxNumeroInterno.Location = new System.Drawing.Point(196, 261);
+            this.textBoxNumeroInterno.Name = "textBoxNumeroInterno";
+            this.textBoxNumeroInterno.Size = new System.Drawing.Size(100, 20);
+            this.textBoxNumeroInterno.TabIndex = 27;
+            // 
+            // labelNumeroInterno
+            // 
+            this.labelNumeroInterno.AutoSize = true;
+            this.labelNumeroInterno.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelNumeroInterno.Location = new System.Drawing.Point(193, 235);
+            this.labelNumeroInterno.Name = "labelNumeroInterno";
+            this.labelNumeroInterno.Size = new System.Drawing.Size(110, 17);
+            this.labelNumeroInterno.TabIndex = 26;
+            this.labelNumeroInterno.Text = "Numero Interno:";
+            // 
             // FormFuncionarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
             this.ClientSize = new System.Drawing.Size(579, 397);
+            this.Controls.Add(this.textBoxNumeroInterno);
+            this.Controls.Add(this.labelNumeroInterno);
             this.Controls.Add(this.buttonCancel);
             this.Controls.Add(this.textBoxMorada);
             this.Controls.Add(this.textBoxEmail);
@@ -359,5 +381,7 @@ namespace Gvendas.pt.com.Gvendas.VIEWS
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button buttonTestDB;
         private System.Windows.Forms.Button buttonHome;
+        private System.Windows.Forms.TextBox textBoxNumeroInterno;
+        private System.Windows.Forms.Label labelNumeroInterno;
     }
 }

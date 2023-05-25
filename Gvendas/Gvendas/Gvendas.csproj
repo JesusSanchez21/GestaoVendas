@@ -88,6 +88,12 @@
     <Compile Include="pt.com.Gvendas.VIEWS\FormEncomendas.Designer.cs">
       <DependentUpon>FormEncomendas.cs</DependentUpon>
     </Compile>
+    <Compile Include="pt.com.Gvendas.VIEWS\FormEscolhaManipulacao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pt.com.Gvendas.VIEWS\FormEscolhaManipulacao.Designer.cs">
+      <DependentUpon>FormEscolhaManipulacao.cs</DependentUpon>
+    </Compile>
     <Compile Include="pt.com.Gvendas.VIEWS\FormFornecedores.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -118,6 +124,12 @@
     <Compile Include="pt.com.Gvendas.VIEWS\FormManipularDados.Designer.cs">
       <DependentUpon>FormManipularDados.cs</DependentUpon>
     </Compile>
+    <Compile Include="pt.com.Gvendas.VIEWS\FormPagamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pt.com.Gvendas.VIEWS\FormPagamento.Designer.cs">
+      <DependentUpon>FormPagamento.cs</DependentUpon>
+    </Compile>
     <Compile Include="pt.com.Gvendas.VIEWS\FormProdutos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -135,6 +147,9 @@
     <EmbeddedResource Include="pt.com.Gvendas.VIEWS\FormEncomendas.resx">
       <DependentUpon>FormEncomendas.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="pt.com.Gvendas.VIEWS\FormEscolhaManipulacao.resx">
+      <DependentUpon>FormEscolhaManipulacao.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="pt.com.Gvendas.VIEWS\FormFornecedores.resx">
       <DependentUpon>FormFornecedores.cs</DependentUpon>
     </EmbeddedResource>
@@ -149,6 +164,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="pt.com.Gvendas.VIEWS\FormManipularDados.resx">
       <DependentUpon>FormManipularDados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pt.com.Gvendas.VIEWS\FormPagamento.resx">
+      <DependentUpon>FormPagamento.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="pt.com.Gvendas.VIEWS\FormProdutos.resx">
       <DependentUpon>FormProdutos.cs</DependentUpon>

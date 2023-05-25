@@ -30,15 +30,15 @@ namespace Gvendas.pt.com.Gvendas.VIEWS
         private void InitializeComponent()
         {
             this.buttonCancel = new System.Windows.Forms.Button();
-            this.textBoxMorada = new System.Windows.Forms.TextBox();
+            this.textBoxDataEncomenda = new System.Windows.Forms.TextBox();
             this.textBoxEmail = new System.Windows.Forms.TextBox();
-            this.textBoxTelefone = new System.Windows.Forms.TextBox();
-            this.textBoxNome = new System.Windows.Forms.TextBox();
+            this.textBoxFuncionarioID = new System.Windows.Forms.TextBox();
+            this.textBoxClienteID = new System.Windows.Forms.TextBox();
             this.buttonSalvar = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.labelNome = new System.Windows.Forms.Label();
+            this.labelDataEncomenda = new System.Windows.Forms.Label();
+            this.labelFuncionarioID = new System.Windows.Forms.Label();
+            this.labelValorTotal = new System.Windows.Forms.Label();
+            this.labelClienteID = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.buttonTestDB = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
@@ -68,13 +68,13 @@ namespace Gvendas.pt.com.Gvendas.VIEWS
             this.buttonCancel.Text = "Cancelar";
             this.buttonCancel.UseVisualStyleBackColor = false;
             // 
-            // textBoxMorada
+            // textBoxDataEncomenda
             // 
-            this.textBoxMorada.BackColor = System.Drawing.Color.Gainsboro;
-            this.textBoxMorada.Location = new System.Drawing.Point(205, 179);
-            this.textBoxMorada.Name = "textBoxMorada";
-            this.textBoxMorada.Size = new System.Drawing.Size(100, 20);
-            this.textBoxMorada.TabIndex = 57;
+            this.textBoxDataEncomenda.BackColor = System.Drawing.Color.Gainsboro;
+            this.textBoxDataEncomenda.Location = new System.Drawing.Point(205, 179);
+            this.textBoxDataEncomenda.Name = "textBoxDataEncomenda";
+            this.textBoxDataEncomenda.Size = new System.Drawing.Size(100, 20);
+            this.textBoxDataEncomenda.TabIndex = 57;
             // 
             // textBoxEmail
             // 
@@ -84,21 +84,21 @@ namespace Gvendas.pt.com.Gvendas.VIEWS
             this.textBoxEmail.Size = new System.Drawing.Size(100, 20);
             this.textBoxEmail.TabIndex = 56;
             // 
-            // textBoxTelefone
+            // textBoxFuncionarioID
             // 
-            this.textBoxTelefone.BackColor = System.Drawing.Color.Gainsboro;
-            this.textBoxTelefone.Location = new System.Drawing.Point(419, 86);
-            this.textBoxTelefone.Name = "textBoxTelefone";
-            this.textBoxTelefone.Size = new System.Drawing.Size(100, 20);
-            this.textBoxTelefone.TabIndex = 55;
+            this.textBoxFuncionarioID.BackColor = System.Drawing.Color.Gainsboro;
+            this.textBoxFuncionarioID.Location = new System.Drawing.Point(419, 86);
+            this.textBoxFuncionarioID.Name = "textBoxFuncionarioID";
+            this.textBoxFuncionarioID.Size = new System.Drawing.Size(100, 20);
+            this.textBoxFuncionarioID.TabIndex = 55;
             // 
-            // textBoxNome
+            // textBoxClienteID
             // 
-            this.textBoxNome.BackColor = System.Drawing.Color.Gainsboro;
-            this.textBoxNome.Location = new System.Drawing.Point(205, 86);
-            this.textBoxNome.Name = "textBoxNome";
-            this.textBoxNome.Size = new System.Drawing.Size(100, 20);
-            this.textBoxNome.TabIndex = 54;
+            this.textBoxClienteID.BackColor = System.Drawing.Color.Gainsboro;
+            this.textBoxClienteID.Location = new System.Drawing.Point(205, 86);
+            this.textBoxClienteID.Name = "textBoxClienteID";
+            this.textBoxClienteID.Size = new System.Drawing.Size(100, 20);
+            this.textBoxClienteID.TabIndex = 54;
             // 
             // buttonSalvar
             // 
@@ -115,45 +115,45 @@ namespace Gvendas.pt.com.Gvendas.VIEWS
             this.buttonSalvar.Text = "Salvar";
             this.buttonSalvar.UseVisualStyleBackColor = false;
             // 
-            // label3
+            // labelDataEncomenda
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(203, 151);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(60, 17);
-            this.label3.TabIndex = 52;
-            this.label3.Text = "Morada:";
+            this.labelDataEncomenda.AutoSize = true;
+            this.labelDataEncomenda.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelDataEncomenda.Location = new System.Drawing.Point(203, 151);
+            this.labelDataEncomenda.Name = "labelDataEncomenda";
+            this.labelDataEncomenda.Size = new System.Drawing.Size(121, 17);
+            this.labelDataEncomenda.TabIndex = 52;
+            this.labelDataEncomenda.Text = "Data Encomenda:";
             // 
-            // label2
+            // labelFuncionarioID
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(416, 60);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(68, 17);
-            this.label2.TabIndex = 51;
-            this.label2.Text = "Telefone:";
+            this.labelFuncionarioID.AutoSize = true;
+            this.labelFuncionarioID.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelFuncionarioID.Location = new System.Drawing.Point(416, 60);
+            this.labelFuncionarioID.Name = "labelFuncionarioID";
+            this.labelFuncionarioID.Size = new System.Drawing.Size(103, 17);
+            this.labelFuncionarioID.TabIndex = 51;
+            this.labelFuncionarioID.Text = "Funcionario ID:";
             // 
-            // label1
+            // labelValorTotal
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(417, 151);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(46, 17);
-            this.label1.TabIndex = 50;
-            this.label1.Text = "Email:";
+            this.labelValorTotal.AutoSize = true;
+            this.labelValorTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelValorTotal.Location = new System.Drawing.Point(417, 151);
+            this.labelValorTotal.Name = "labelValorTotal";
+            this.labelValorTotal.Size = new System.Drawing.Size(81, 17);
+            this.labelValorTotal.TabIndex = 50;
+            this.labelValorTotal.Text = "Valor Total:";
             // 
-            // labelNome
+            // labelClienteID
             // 
-            this.labelNome.AutoSize = true;
-            this.labelNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelNome.Location = new System.Drawing.Point(202, 60);
-            this.labelNome.Name = "labelNome";
-            this.labelNome.Size = new System.Drawing.Size(49, 17);
-            this.labelNome.TabIndex = 49;
-            this.labelNome.Text = "Nome:";
+            this.labelClienteID.AutoSize = true;
+            this.labelClienteID.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelClienteID.Location = new System.Drawing.Point(202, 60);
+            this.labelClienteID.Name = "labelClienteID";
+            this.labelClienteID.Size = new System.Drawing.Size(72, 17);
+            this.labelClienteID.TabIndex = 49;
+            this.labelClienteID.Text = "Cliente ID:";
             // 
             // panel1
             // 
@@ -314,15 +314,15 @@ namespace Gvendas.pt.com.Gvendas.VIEWS
             this.BackColor = System.Drawing.Color.Silver;
             this.ClientSize = new System.Drawing.Size(579, 397);
             this.Controls.Add(this.buttonCancel);
-            this.Controls.Add(this.textBoxMorada);
+            this.Controls.Add(this.textBoxDataEncomenda);
             this.Controls.Add(this.textBoxEmail);
-            this.Controls.Add(this.textBoxTelefone);
-            this.Controls.Add(this.textBoxNome);
+            this.Controls.Add(this.textBoxFuncionarioID);
+            this.Controls.Add(this.textBoxClienteID);
             this.Controls.Add(this.buttonSalvar);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.labelNome);
+            this.Controls.Add(this.labelDataEncomenda);
+            this.Controls.Add(this.labelFuncionarioID);
+            this.Controls.Add(this.labelValorTotal);
+            this.Controls.Add(this.labelClienteID);
             this.Controls.Add(this.panel1);
             this.Name = "FormEncomendas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -337,15 +337,15 @@ namespace Gvendas.pt.com.Gvendas.VIEWS
         #endregion
 
         private System.Windows.Forms.Button buttonCancel;
-        private System.Windows.Forms.TextBox textBoxMorada;
+        private System.Windows.Forms.TextBox textBoxDataEncomenda;
         private System.Windows.Forms.TextBox textBoxEmail;
-        private System.Windows.Forms.TextBox textBoxTelefone;
-        private System.Windows.Forms.TextBox textBoxNome;
+        private System.Windows.Forms.TextBox textBoxFuncionarioID;
+        private System.Windows.Forms.TextBox textBoxClienteID;
         private System.Windows.Forms.Button buttonSalvar;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label labelNome;
+        private System.Windows.Forms.Label labelDataEncomenda;
+        private System.Windows.Forms.Label labelFuncionarioID;
+        private System.Windows.Forms.Label labelValorTotal;
+        private System.Windows.Forms.Label labelClienteID;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button buttonTestDB;
         private System.Windows.Forms.Button button7;

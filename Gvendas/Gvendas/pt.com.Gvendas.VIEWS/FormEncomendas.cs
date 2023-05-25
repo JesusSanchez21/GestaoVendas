@@ -37,9 +37,9 @@ namespace Gvendas.pt.com.Gvendas.VIEWS
         private void blockUI()
         {
             textBoxEmail.Enabled = false;
-            textBoxMorada.Enabled = false;
-            textBoxNome.Enabled = false;
-            textBoxTelefone.Enabled = false;
+            textBoxDataEncomenda.Enabled = false;
+            textBoxClienteID.Enabled = false;
+            textBoxFuncionarioID.Enabled = false;
         }
 
 

@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Gvendas.pt.com.Gvendas.VIEWS
@@ -20,6 +13,23 @@ namespace Gvendas.pt.com.Gvendas.VIEWS
         private void buttonCancelar_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void buttonAdicionar_Click(object sender, EventArgs e)
+        {
+            FormEscolhaManipulacao form = new FormEscolhaManipulacao();
+            form.ShowDialog();
+            this.Close();
+        }
+
+        private void buttonEditar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonRemover_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

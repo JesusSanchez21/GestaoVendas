@@ -36,10 +36,9 @@ namespace Gvendas.pt.com.Gvendas.VIEWS
 
         private void blockUI()
         {
-            textBoxEmail.Enabled = false;
-            textBoxMorada.Enabled = false;
+            textBoxNumeroInterno.Enabled = false;
             textBoxNome.Enabled = false;
-            textBoxTelefone.Enabled = false;
+            textBoxNomeEmpresa.Enabled = false;
         }
 
 
