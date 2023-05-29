@@ -29,7 +29,8 @@ namespace Gvendas.pt.com.Gvendas.VIEWS
 
         private void buttonRemover_Click(object sender, EventArgs e)
         {
-
+            FormClientes form = new FormClientes(3, null);
+            form.ShowDialog();
         }
     }
 }

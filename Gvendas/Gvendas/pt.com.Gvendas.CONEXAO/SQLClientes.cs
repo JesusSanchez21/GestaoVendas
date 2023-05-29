@@ -88,5 +88,63 @@ namespace Gvendas.pt.com.Gvendas.CONEXAO.Pasta
 
             return clientes;
         }
+        internal static void Delete(int ClienteId)
+        {
+            try
+            {
+                using (DbConnection conn = OpenConnection())
+                {
+                    using (SqlCommand sqlCommand = ((SqlConnection)conn).CreateCommand())
+                    {
+                        sqlCommand.CommandType = CommandType.Text;
+                        sqlCommand.CommandText = "DELETE FROM clientes WHERE id = @id;";
+                        sqlCommand.Parameters.Add(new SqlParameter("@id", ClienteId));
+
+                        int rowsAffected = sqlCommand.ExecuteNonQuery();
+
+                        if (rowsAffected != 1)
+                        {
+                            throw new System.Exception("[SQLClientes] - Ocorreu um erro ao excluir o cliente.");
+                        }
+                    }
+                }
+            }
+            catch (System.Exception ex)
+            {
+                Console.WriteLine("Um erro ocorreu -  contacte do administrador de sistema." + ex.Message);
+            }
+        }
+        internal static void Update(Cliente cliente)
+        {
+            try
+            {
+                using (DbConnection conn = OpenConnection())
+                {
+                    using (SqlCommand sqlCommand = ((SqlConnection)conn).CreateCommand())
+                    {
+                        sqlCommand.CommandType = CommandType.Text;
+                        sqlCommand.CommandText = "UPDATE clientes SET nome = @nome, telefone = @telefone, email = @email, morada = @morada "
+                                                + "WHERE id = @id;";
+                        sqlCommand.Parameters.Add(new SqlParameter("@id", cliente.Id));
+                        sqlCommand.Parameters.Add(new SqlParameter("@nome", cliente.Nome));
+                        sqlCommand.Parameters.Add(new SqlParameter("@telefone", cliente.Telefone));
+                        sqlCommand.Parameters.Add(new SqlParameter("@email", cliente.Email));
+                        sqlCommand.Parameters.Add(new SqlParameter("@morada", cliente.Morada));
+
+                        int rowsAffected = sqlCommand.ExecuteNonQuery();
+
+                        if (rowsAffected != 1)
+                        {
+                            throw new System.Exception("[SQLClientes] - Ocorreu um erro ao atualizar o cliente.");
+                        }
+                    }
+                }
+            }
+            catch (System.Exception ex)
+            {
+                Console.WriteLine("Um erro ocorreu -  contacte do administrador de sistema." + ex.Message);
+            }
+        }
+
     }
 }
