@@ -49,36 +49,31 @@ namespace Gvendas
 
         private void buttonSalvar_Click(object sender, EventArgs e)
         {
-            
-
-
-            if (formValid())
+            if (formValid(out Cliente cliente))
             {
-
-                Cliente cliente = new Cliente
-                {
-                    Nome = textBoxNome.Text,
-                    Email = textBoxEmail.Text,
-                    Morada = textBoxMorada.Text,
-                    Telefone = int.Parse(textBoxTelefone.Text)
-                };
+                cliente.Nome = textBoxNome.Text;
+                cliente.Email = textBoxEmail.Text;
+                cliente.Morada = textBoxMorada.Text;
+                cliente.Telefone = int.Parse(textBoxTelefone.Text);
 
                 SQLClientes.Insert(cliente);
             }
         }
 
-        private bool formValid()
+        private bool formValid(out Cliente cliente)
         {
-           if (String.IsNullOrEmpty(cliente.Nome))
+            cliente = new Cliente(); // Initialize the cliente object
+
+            if (String.IsNullOrEmpty(textBoxNome.Text))
             {
-                MessageBox.Show("O campo nome não pode estar vazio.", "ERRO", 
-                    MessageBoxButtons.OKCancel, 
+                MessageBox.Show("O campo nome não pode estar vazio.", "ERRO",
+                    MessageBoxButtons.OKCancel,
                     MessageBoxIcon.Information);
                 return false;
             }
-            return true; 
-        }
 
+            return true;
+        }
         private void buttonTestDB_Click(object sender, EventArgs e)
         {
             DbConnection connectionIsSuccess = null;

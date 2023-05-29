@@ -60,7 +60,9 @@ namespace Gvendas.pt.com.Gvendas.VIEWS
                             cliente.Id.ToString(),
                             cliente.Nome,
                             cliente.Morada,
-                        });
+                            cliente.Email,
+                            cliente.Telefone.ToString()
+                        }) ;
                         listView.Items.Add(row);
                     }
                     break;
