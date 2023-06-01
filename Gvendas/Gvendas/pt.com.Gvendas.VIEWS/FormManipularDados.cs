@@ -10,11 +10,6 @@ namespace Gvendas.pt.com.Gvendas.VIEWS
             InitializeComponent();
         }
 
-        private void buttonCancelar_Click(object sender, EventArgs e)
-        {
-             
-        }
-
         private void buttonAdicionar_Click(object sender, EventArgs e)
         {
             FormEscolhaManipulacao form = new FormEscolhaManipulacao();
@@ -22,14 +17,9 @@ namespace Gvendas.pt.com.Gvendas.VIEWS
              
         }
 
-        private void buttonEditar_Click(object sender, EventArgs e)
+        private void buttonEditarRemover_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void buttonRemover_Click(object sender, EventArgs e)
-        {
-            FormClientes form = new FormClientes(3, null);
+            FormUpdateDelete form = new FormUpdateDelete(1);
             form.ShowDialog();
         }
     }

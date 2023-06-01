@@ -29,7 +29,6 @@ namespace Gvendas.pt.com.Gvendas.VIEWS
         /// </summary>
         private void InitializeComponent()
         {
-            this.buttonCancel = new System.Windows.Forms.Button();
             this.textBoxNome = new System.Windows.Forms.TextBox();
             this.buttonSalvar = new System.Windows.Forms.Button();
             this.labelNome = new System.Windows.Forms.Label();
@@ -49,22 +48,6 @@ namespace Gvendas.pt.com.Gvendas.VIEWS
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
-            // buttonCancel
-            // 
-            this.buttonCancel.BackColor = System.Drawing.Color.Gray;
-            this.buttonCancel.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.buttonCancel.FlatAppearance.BorderSize = 2;
-            this.buttonCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonCancel.ForeColor = System.Drawing.Color.White;
-            this.buttonCancel.Location = new System.Drawing.Point(493, 346);
-            this.buttonCancel.Name = "buttonCancel";
-            this.buttonCancel.Size = new System.Drawing.Size(80, 39);
-            this.buttonCancel.TabIndex = 36;
-            this.buttonCancel.Text = "Cancelar";
-            this.buttonCancel.UseVisualStyleBackColor = false;
-            this.buttonCancel.Click += new System.EventHandler(this.buttonCancel_Click);
-            // 
             // textBoxNome
             // 
             this.textBoxNome.BackColor = System.Drawing.Color.Gainsboro;
@@ -81,7 +64,7 @@ namespace Gvendas.pt.com.Gvendas.VIEWS
             this.buttonSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonSalvar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonSalvar.ForeColor = System.Drawing.Color.White;
-            this.buttonSalvar.Location = new System.Drawing.Point(379, 346);
+            this.buttonSalvar.Location = new System.Drawing.Point(450, 341);
             this.buttonSalvar.Name = "buttonSalvar";
             this.buttonSalvar.Size = new System.Drawing.Size(80, 39);
             this.buttonSalvar.TabIndex = 31;
@@ -275,7 +258,6 @@ namespace Gvendas.pt.com.Gvendas.VIEWS
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
             this.ClientSize = new System.Drawing.Size(579, 397);
-            this.Controls.Add(this.buttonCancel);
             this.Controls.Add(this.textBoxFornecedorID);
             this.Controls.Add(this.textBoxNome);
             this.Controls.Add(this.buttonSalvar);
@@ -293,8 +275,6 @@ namespace Gvendas.pt.com.Gvendas.VIEWS
         }
 
         #endregion
-
-        private System.Windows.Forms.Button buttonCancel;
         private System.Windows.Forms.TextBox textBoxNome;
         private System.Windows.Forms.Button buttonSalvar;
         private System.Windows.Forms.Label labelNome;

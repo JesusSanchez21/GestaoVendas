@@ -12,11 +12,6 @@ namespace Gvendas.pt.com.Gvendas.VIEWS
             InitializeComponent();
         }
 
-        private void button3_Click(object sender, EventArgs e)
-        {
-             
-        }
-
         private void buttonManipular_Click(object sender, EventArgs e)
         {
             FormManipularDados form = new FormManipularDados();

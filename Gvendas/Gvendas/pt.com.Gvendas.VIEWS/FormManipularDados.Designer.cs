@@ -28,46 +28,28 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.buttonRemover = new System.Windows.Forms.Button();
-            this.buttonEditar = new System.Windows.Forms.Button();
+            this.buttonEditarRemover = new System.Windows.Forms.Button();
             this.buttonAdicionar = new System.Windows.Forms.Button();
             this.labelManipularDados = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.buttonCancelar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // buttonRemover
+            // buttonEditarRemover
             // 
-            this.buttonRemover.BackColor = System.Drawing.Color.Gray;
-            this.buttonRemover.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.buttonRemover.FlatAppearance.BorderSize = 2;
-            this.buttonRemover.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonRemover.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonRemover.ForeColor = System.Drawing.Color.White;
-            this.buttonRemover.Location = new System.Drawing.Point(431, 295);
-            this.buttonRemover.Name = "buttonRemover";
-            this.buttonRemover.Size = new System.Drawing.Size(101, 35);
-            this.buttonRemover.TabIndex = 38;
-            this.buttonRemover.Text = "Remover";
-            this.buttonRemover.UseVisualStyleBackColor = false;
-            this.buttonRemover.Click += new System.EventHandler(this.buttonRemover_Click);
-            // 
-            // buttonEditar
-            // 
-            this.buttonEditar.BackColor = System.Drawing.Color.Gray;
-            this.buttonEditar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.buttonEditar.FlatAppearance.BorderSize = 2;
-            this.buttonEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonEditar.ForeColor = System.Drawing.Color.White;
-            this.buttonEditar.Location = new System.Drawing.Point(204, 295);
-            this.buttonEditar.Name = "buttonEditar";
-            this.buttonEditar.Size = new System.Drawing.Size(157, 35);
-            this.buttonEditar.TabIndex = 37;
-            this.buttonEditar.Text = "Editar";
-            this.buttonEditar.UseVisualStyleBackColor = false;
-            this.buttonEditar.Click += new System.EventHandler(this.buttonEditar_Click);
+            this.buttonEditarRemover.BackColor = System.Drawing.Color.Gray;
+            this.buttonEditarRemover.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.buttonEditarRemover.FlatAppearance.BorderSize = 2;
+            this.buttonEditarRemover.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonEditarRemover.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonEditarRemover.ForeColor = System.Drawing.Color.White;
+            this.buttonEditarRemover.Location = new System.Drawing.Point(295, 293);
+            this.buttonEditarRemover.Name = "buttonEditarRemover";
+            this.buttonEditarRemover.Size = new System.Drawing.Size(240, 35);
+            this.buttonEditarRemover.TabIndex = 37;
+            this.buttonEditarRemover.Text = "Editar e Remover";
+            this.buttonEditarRemover.UseVisualStyleBackColor = false;
+            this.buttonEditarRemover.Click += new System.EventHandler(this.buttonEditarRemover_Click);
             // 
             // buttonAdicionar
             // 
@@ -77,9 +59,9 @@
             this.buttonAdicionar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonAdicionar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonAdicionar.ForeColor = System.Drawing.Color.White;
-            this.buttonAdicionar.Location = new System.Drawing.Point(36, 295);
+            this.buttonAdicionar.Location = new System.Drawing.Point(17, 293);
             this.buttonAdicionar.Name = "buttonAdicionar";
-            this.buttonAdicionar.Size = new System.Drawing.Size(106, 35);
+            this.buttonAdicionar.Size = new System.Drawing.Size(269, 35);
             this.buttonAdicionar.TabIndex = 36;
             this.buttonAdicionar.Text = "Adicionar";
             this.buttonAdicionar.UseVisualStyleBackColor = false;
@@ -105,30 +87,13 @@
             this.pictureBox1.TabIndex = 34;
             this.pictureBox1.TabStop = false;
             // 
-            // buttonCancelar
-            // 
-            this.buttonCancelar.BackColor = System.Drawing.Color.Gray;
-            this.buttonCancelar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.buttonCancelar.FlatAppearance.BorderSize = 2;
-            this.buttonCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonCancelar.ForeColor = System.Drawing.Color.White;
-            this.buttonCancelar.Location = new System.Drawing.Point(234, 346);
-            this.buttonCancelar.Name = "buttonCancelar";
-            this.buttonCancelar.Size = new System.Drawing.Size(101, 35);
-            this.buttonCancelar.TabIndex = 39;
-            this.buttonCancelar.Text = "Cancelar";
-            this.buttonCancelar.UseVisualStyleBackColor = false;
-            this.buttonCancelar.Click += new System.EventHandler(this.buttonCancelar_Click);
-            // 
             // FormManipularDados
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(569, 393);
-            this.Controls.Add(this.buttonCancelar);
-            this.Controls.Add(this.buttonRemover);
-            this.Controls.Add(this.buttonEditar);
+            this.Controls.Add(this.buttonEditarRemover);
             this.Controls.Add(this.buttonAdicionar);
             this.Controls.Add(this.labelManipularDados);
             this.Controls.Add(this.pictureBox1);
@@ -142,12 +107,9 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button buttonRemover;
-        private System.Windows.Forms.Button buttonEditar;
+        private System.Windows.Forms.Button buttonEditarRemover;
         private System.Windows.Forms.Button buttonAdicionar;
         private System.Windows.Forms.Label labelManipularDados;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button buttonCancelar;
     }
 }

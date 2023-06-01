@@ -42,13 +42,6 @@ namespace Gvendas.pt.com.Gvendas.VIEWS
             textBoxTelefone.Enabled = false;
         }
 
-
-
-        private void buttonCancel_Click(object sender, EventArgs e)
-        {
-             
-        }
-
         private void buttonSalvar_Click(object sender, EventArgs e)
         {
             switch (SQLAction)

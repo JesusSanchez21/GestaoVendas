@@ -49,14 +49,13 @@ namespace Gvendas.pt.com.Gvendas.CONEXAO.Pasta
 
             try
             {
-                //open connection to database
                 using (DbConnection conn = OpenConnection())
                 {
-                    //instance to allow sql commands
+                    //instancia para permitir comandos 
                     using (SqlCommand sqlCommand = ((SqlConnection)conn).CreateCommand())
                     {
                         string query = "Select * from clientes;";
-                        //defining commmand type
+                        //defining o tipo de comando
                         sqlCommand.CommandText = query;
                         sqlCommand.CommandType = CommandType.Text;
                         sqlCommand.Connection = ((SqlConnection)conn);
@@ -69,7 +68,7 @@ namespace Gvendas.pt.com.Gvendas.CONEXAO.Pasta
                             {
                                 cliente = new Cliente(
                                     reader.GetInt32(reader.GetOrdinal("id")),
-                                    reader["nome"].ToString(),                                    
+                                    reader["nome"].ToString(),
                                     reader["morada"].ToString(),
                                     reader["email"].ToString(),
                                     int.Parse(reader["telefone"].ToString())
@@ -88,62 +87,123 @@ namespace Gvendas.pt.com.Gvendas.CONEXAO.Pasta
 
             return clientes;
         }
-        internal static void Delete(int ClienteId)
+
+        internal static Cliente getClienteById(int id)
         {
+            Cliente cliente = null;
+
             try
             {
                 using (DbConnection conn = OpenConnection())
                 {
                     using (SqlCommand sqlCommand = ((SqlConnection)conn).CreateCommand())
                     {
+                        // Define a query
+                        string query = "SELECT * FROM clientes WHERE id = @id;";
+                        sqlCommand.CommandText = query;
                         sqlCommand.CommandType = CommandType.Text;
-                        sqlCommand.CommandText = "DELETE FROM clientes WHERE id = @id;";
-                        sqlCommand.Parameters.Add(new SqlParameter("@id", ClienteId));
+                        sqlCommand.Connection = ((SqlConnection)conn);
 
-                        int rowsAffected = sqlCommand.ExecuteNonQuery();
+                        // Adiciona o parametro
+                        sqlCommand.Parameters.AddWithValue("@id", id);
 
-                        if (rowsAffected != 1)
+                        // Executa a query
+                        using (SqlDataReader reader = sqlCommand.ExecuteReader())
                         {
-                            throw new System.Exception("[SQLClientes] - Ocorreu um erro ao excluir o cliente.");
+                            if (reader.Read())
+                            {
+                                cliente = new Cliente(
+                                    reader.GetInt32(reader.GetOrdinal("id")),
+                                    reader["nome"].ToString(),
+                                    reader["morada"].ToString(),
+                                    reader["email"].ToString(),
+                                    int.Parse(reader["telefone"].ToString())
+                                );
+                            }
                         }
                     }
                 }
             }
-            catch (System.Exception ex)
+            catch (Exception ex)
             {
-                Console.WriteLine("Um erro ocorreu -  contacte do administrador de sistema." + ex.Message);
+                Console.WriteLine("Error retrieving cliente by ID: " + ex.Message);
             }
+
+            return cliente;
         }
-        internal static void Update(Cliente cliente)
+
+        internal static bool updateCliente(Cliente cliente)
         {
+            bool success = false;
+
             try
             {
                 using (DbConnection conn = OpenConnection())
                 {
+                    // Create SQL command
                     using (SqlCommand sqlCommand = ((SqlConnection)conn).CreateCommand())
                     {
+                        // Cria a query
+                        string query = "UPDATE clientes SET nome = @nome, morada = @morada, email = @email, telefone = @telefone WHERE id = @id;";
+                        sqlCommand.CommandText = query;
                         sqlCommand.CommandType = CommandType.Text;
-                        sqlCommand.CommandText = "UPDATE clientes SET nome = @nome, telefone = @telefone, email = @email, morada = @morada "
-                                                + "WHERE id = @id;";
-                        sqlCommand.Parameters.Add(new SqlParameter("@id", cliente.Id));
-                        sqlCommand.Parameters.Add(new SqlParameter("@nome", cliente.Nome));
-                        sqlCommand.Parameters.Add(new SqlParameter("@telefone", cliente.Telefone));
-                        sqlCommand.Parameters.Add(new SqlParameter("@email", cliente.Email));
-                        sqlCommand.Parameters.Add(new SqlParameter("@morada", cliente.Morada));
+                        sqlCommand.Connection = ((SqlConnection)conn);
 
+                        // Adiciona os parametros
+                        sqlCommand.Parameters.AddWithValue("@nome", cliente.Nome);
+                        sqlCommand.Parameters.AddWithValue("@morada", cliente.Morada);
+                        sqlCommand.Parameters.AddWithValue("@email", cliente.Email);
+                        sqlCommand.Parameters.AddWithValue("@telefone", cliente.Telefone);
+                        sqlCommand.Parameters.AddWithValue("@id", cliente.Id);
+
+                        // Execute a query update
                         int rowsAffected = sqlCommand.ExecuteNonQuery();
-
-                        if (rowsAffected != 1)
-                        {
-                            throw new System.Exception("[SQLClientes] - Ocorreu um erro ao atualizar o cliente.");
-                        }
+                        success = rowsAffected > 0;
                     }
                 }
             }
-            catch (System.Exception ex)
+            catch (Exception ex)
             {
-                Console.WriteLine("Um erro ocorreu -  contacte do administrador de sistema." + ex.Message);
+
+                Console.WriteLine("Error updating cliente: " + ex.Message);
             }
+
+            return success;
+        }
+
+        internal static bool deleteCliente(int id)
+        {
+            bool success = false;
+
+            try
+            {
+
+                using (DbConnection conn = OpenConnection())
+                {
+                    // Cria o comando SQL
+                    using (SqlCommand sqlCommand = ((SqlConnection)conn).CreateCommand())
+                    {
+
+                        string query = "DELETE FROM clientes WHERE id = @id;";
+                        sqlCommand.CommandText = query;
+                        sqlCommand.CommandType = CommandType.Text;
+                        sqlCommand.Connection = ((SqlConnection)conn);
+
+                        // Adiciona o parametro
+                        sqlCommand.Parameters.AddWithValue("@id", id);
+
+                        // Executa a query delete
+                        int rowsAffected = sqlCommand.ExecuteNonQuery();
+                        success = rowsAffected > 0;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error deleting cliente: " + ex.Message);
+            }
+
+            return success;
         }
 
     }

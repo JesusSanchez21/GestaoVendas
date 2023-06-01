@@ -58,11 +58,12 @@ namespace Gvendas
 
                 SQLClientes.Insert(cliente);
             }
-        }
+            MessageBox.Show("Data saved successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+    }
 
         private bool formValid(out Cliente cliente)
         {
-            cliente = new Cliente(); // Initialize the cliente object
+            cliente = new Cliente();
 
             if (String.IsNullOrEmpty(textBoxNome.Text))
             {
@@ -129,11 +130,6 @@ namespace Gvendas
         {
             FormHome form = new FormHome();
             form.ShowDialog();
-        }
-
-        private void buttonCancel_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

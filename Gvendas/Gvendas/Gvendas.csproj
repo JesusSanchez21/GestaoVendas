@@ -138,6 +138,12 @@
     <Compile Include="pt.com.Gvendas.VIEWS\FormProdutos.Designer.cs">
       <DependentUpon>FormProdutos.cs</DependentUpon>
     </Compile>
+    <Compile Include="pt.com.Gvendas.VIEWS\FormUpdateDelete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pt.com.Gvendas.VIEWS\FormUpdateDelete.Designer.cs">
+      <DependentUpon>FormUpdateDelete.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="pt.com.Gvendas.VIEWS\FormClientes.resx">
       <DependentUpon>FormClientes.cs</DependentUpon>
     </EmbeddedResource>
@@ -172,6 +178,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="pt.com.Gvendas.VIEWS\FormProdutos.resx">
       <DependentUpon>FormProdutos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pt.com.Gvendas.VIEWS\FormUpdateDelete.resx">
+      <DependentUpon>FormUpdateDelete.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

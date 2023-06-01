@@ -46,7 +46,6 @@
             this.textBoxTelefone = new System.Windows.Forms.TextBox();
             this.textBoxEmail = new System.Windows.Forms.TextBox();
             this.textBoxMorada = new System.Windows.Forms.TextBox();
-            this.buttonCancel = new System.Windows.Forms.Button();
             this.buttonSalvar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -277,22 +276,6 @@
             this.textBoxMorada.Size = new System.Drawing.Size(100, 20);
             this.textBoxMorada.TabIndex = 10;
             // 
-            // buttonCancel
-            // 
-            this.buttonCancel.BackColor = System.Drawing.Color.Gray;
-            this.buttonCancel.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.buttonCancel.FlatAppearance.BorderSize = 2;
-            this.buttonCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonCancel.ForeColor = System.Drawing.Color.White;
-            this.buttonCancel.Location = new System.Drawing.Point(486, 350);
-            this.buttonCancel.Name = "buttonCancel";
-            this.buttonCancel.Size = new System.Drawing.Size(80, 39);
-            this.buttonCancel.TabIndex = 27;
-            this.buttonCancel.Text = "Cancelar";
-            this.buttonCancel.UseVisualStyleBackColor = false;
-            this.buttonCancel.Click += new System.EventHandler(this.buttonCancel_Click);
-            // 
             // buttonSalvar
             // 
             this.buttonSalvar.BackColor = System.Drawing.Color.Gray;
@@ -301,7 +284,7 @@
             this.buttonSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonSalvar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonSalvar.ForeColor = System.Drawing.Color.White;
-            this.buttonSalvar.Location = new System.Drawing.Point(372, 350);
+            this.buttonSalvar.Location = new System.Drawing.Point(428, 342);
             this.buttonSalvar.Name = "buttonSalvar";
             this.buttonSalvar.Size = new System.Drawing.Size(80, 39);
             this.buttonSalvar.TabIndex = 26;
@@ -315,7 +298,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
             this.ClientSize = new System.Drawing.Size(579, 397);
-            this.Controls.Add(this.buttonCancel);
             this.Controls.Add(this.buttonSalvar);
             this.Controls.Add(this.textBoxMorada);
             this.Controls.Add(this.textBoxEmail);
@@ -356,7 +338,6 @@
         private System.Windows.Forms.TextBox textBoxEmail;
         private System.Windows.Forms.TextBox textBoxMorada;
         private System.Windows.Forms.Button buttonTestDB;
-        private System.Windows.Forms.Button buttonCancel;
         private System.Windows.Forms.Button buttonSalvar;
         private System.Windows.Forms.Button buttonProdutos;
         private System.Windows.Forms.Button buttonHome;
